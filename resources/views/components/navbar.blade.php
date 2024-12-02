@@ -104,7 +104,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
       <div class="container">
         <!-- Logo -->
         <a class="navbar-brand" href="{{ route('home') }}">
