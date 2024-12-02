@@ -11,19 +11,39 @@
 
     <style>
 
-
-
-
+/* carousel */
 .carousel-inner .carousel-item img {
   width: 100%;      /* Gambar mengisi lebar kontainer */
   height: 456px;    /* Tinggi tetap 456px */
   object-fit: cover; /* Menjaga aspek rasio gambar dan mengisi kotak tanpa merusak proporsi */
 }
 
+/* carousel mobie? */
+@media (max-width: 768px) {
+  /* Mengatur gambar carousel agar di-crop dan di-zoom sesuai ukuran */
+  .carousel-inner .carousel-item img {
+    width: 390px;
+    height: 124px;
+    object-fit: cover;  /* Crop dan zoom gambar untuk memenuhi ukuran yang diinginkan */
+    margin: 0 auto;     /* Mengatur gambar agar tetap berada di tengah */
+  }
 
+  /* Mengubah ukuran gambar placeholder untuk mobile */
+  .carousel-item img {
+    width: 390px;
+    height: 124px;
+    object-fit: cover;  /* Crop dan zoom gambar placeholder agar sesuai ukuran */
+    margin: 0 auto;
+  }
 
+  /* Mengubah ukuran tombol navigasi pada layar kecil */
+  .carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
 
-        /* Styling untuk Konten Section 1 */
+ /* Styling untuk Konten Section 1 */
         .section-1 {
             margin-top: 3rem;
             padding: 2rem 0;
@@ -90,60 +110,9 @@
         }
 
         /* Styling untuk Konten Section 2 */
-        .section-2 {
-            padding: 3rem 0;
-            /* background-color: #f8f9fa; Warna latar belakang light */
-        }
 
-        .section-2 .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
 
-        .section-2 .col-lg-6 img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-        }
 
-        .section-2 .text-box {
-            text-align: left;
-            max-width: 600px;
-        }
-
-        .section-2 .text-box h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-2 .text-box p {
-            font-size: 1.125rem;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Tombol See More pada Section 2 */
-        .section-2 .btn-see-more {
-            background-color: #703c2d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.125rem;
-            text-align: center;
-        }
-
-        .section-2 .btn-see-more:hover {
-            background-color: #5e2e1e;
-        }
-
-        .section-3 .btn-see-more i {
-
-        }
         /* Container untuk gambar dan overlay */
 .overlay-container {
   position: relative;
@@ -212,6 +181,59 @@ align-items: center;
 gap: 36px;
 
  }
+
+ /* /section 3/ */
+
+  /* Custom Styling for Responsive Text */
+  .section-heading {
+            color: #333333;
+            font-size: 48px;
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-weight: 700;
+            line-height: 57.60px;
+        }
+
+        .section-subheading {
+            color: #7A7474;
+            font-size: 28px;
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-weight: 600;
+            line-height: 33.60px;
+        }
+
+        .section-description {
+            color: #383434;
+            font-size: 18px;
+            font-family: Plus Jakarta Sans, sans-serif;
+            font-weight: 600;
+            line-height: 21.60px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .section-heading {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            .section-subheading {
+                font-size: 22px;
+                line-height: 26px;
+            }
+
+            .section-description {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .col-12 {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+
+
         /* Responsif untuk Section 2 */
         @media (max-width: 991px) {
             .section-2 .row {
@@ -220,30 +242,6 @@ gap: 36px;
             }
         }
 
-/* carousel mobie? */
-@media (max-width: 768px) {
-  /* Mengatur gambar carousel agar di-crop dan di-zoom sesuai ukuran */
-  .carousel-inner .carousel-item img {
-    width: 390px;
-    height: 124px;
-    object-fit: cover;  /* Crop dan zoom gambar untuk memenuhi ukuran yang diinginkan */
-    margin: 0 auto;     /* Mengatur gambar agar tetap berada di tengah */
-  }
-
-  /* Mengubah ukuran gambar placeholder untuk mobile */
-  .carousel-item img {
-    width: 390px;
-    height: 124px;
-    object-fit: cover;  /* Crop dan zoom gambar placeholder agar sesuai ukuran */
-    margin: 0 auto;
-  }
-
-  /* Mengubah ukuran tombol navigasi pada layar kecil */
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
-  }
-}
 
 /* section 1 mobile */
 
@@ -370,7 +368,7 @@ gap: 36px;
 
 
 
-
+ <!--  Konten Section  2 -->
     <div class="container d-flex justify-content-center align-items-center">
         <div class="row w-100">
             <!-- Text Section (optional) -->
@@ -394,8 +392,8 @@ gap: 36px;
         </div>
     </div>
 
-<!-- Konten Section 4 -->
-<div class="container section-4">
+<!-- Konten Section 3 -->
+<div class="container section-3">
     <div class="row">
         <div style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex">
             <div style="align-self: stretch; color: #333333; font-size: 40px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 48px; word-wrap: break-word">Info & Promotions</div>
