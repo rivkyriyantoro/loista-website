@@ -2,7 +2,7 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "build": "build loista-website --output public"
+        "build": "build loista-FE --output public"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
