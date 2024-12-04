@@ -27,17 +27,17 @@ Route::get('/CompanyProfile', function () {
 })->name('CompanyProfile');
 
 // Rute contacus yang mengarah ke halaman kontak
-Route::get('/contacus', function () {
-    return view('page.contacus'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
-})->name('contacus');
+Route::get('/ProductMain', function () {
+    return view('page.ProductMain'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('ProductMain');
 
-Route::get('/retails', function () {
-    return view('page.retails'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
-})->name('retails');
+Route::get('/ProductTypeRetail', function () {
+    return view('page.ProductTypeRetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('ProductTypeRetail');
 
-Route::get('/ProductType', function () {
-    return view('page.ProductType'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
-})->name('ProductType');
+Route::get('/ProductTypeDesign', function () {
+    return view('page.ProductTypeDesign'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('ProductTypeDesign');
 
 Route::get('/ProductPerCatalog', function () {
     return view('page.ProductPerCatalog'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'

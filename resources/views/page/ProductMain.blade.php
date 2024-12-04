@@ -398,11 +398,7 @@ gap: 36px;
             </div>
         </div>
     </div>
-    <div style="width: 1164px; justify-content: center; align-items: center; display: inline-flex">
-        <div style="padding-left: 28px; padding-right: 28px; padding-top: 10px; padding-bottom: 10px; background: #333333; border-radius: 10px; justify-content: center; align-items: center; gap: 6px; display: inline-flex">
-            <div style="color: #FAFAFA; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 16.80px; word-wrap: break-word">See other</div>
-        </div>
-    </div>
+
 </div>
      </div>
 

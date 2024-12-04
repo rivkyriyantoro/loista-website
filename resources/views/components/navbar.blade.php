@@ -14,34 +14,46 @@
 
     <style>
       /* General styling */
-      body {
-        font-family: 'Plus Jakarta Sans', sans-serif; /* Make sure the font is applied */
-      }
+    /* General styling */
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif; /* Make sure the font is applied */
+}
 
-      /* Custom navbar styles */
-      .navbar {
-        padding: 0.5rem 1rem;
-        font-weight: 600;
-      }
+/* Custom navbar styles */
+.navbar {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensure that items are vertically aligned */
+}
 
-      .navbar .navbar-brand img {
-        height: 50px; /* Menyesuaikan ukuran logo */
-      }
+.navbar .navbar-brand img {
+  height: 50px; /* Adjust logo size */
+}
 
-      .navbar-nav .nav-item .nav-link {
-        font-weight: 600;
-        padding: 1rem; /* Memberikan padding untuk jarak antar link */
-      }
+.navbar-nav {
+  display: flex;
+  align-items: center; /* Ensure the navbar items are vertically aligned */
+}
 
-      .navbar-nav .nav-item .nav-link:hover {
-        color: #007bff;
-      }
+.navbar-nav .nav-item {
+  margin-right: 1rem; /* Add space between nav items */
+}
 
-      .navbar-toggler {
-        border-color: transparent;
-      }
+.navbar-nav .nav-item .nav-link {
+  font-weight: 600;
+  padding: 1rem; /* Add padding for spacing */
+}
 
-   /* Adjust the WhatsApp button to match the size of other navbar links */
+.navbar-nav .nav-item .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar-toggler {
+  border-color: transparent;
+}
+
 /* Adjust the WhatsApp button to match the size of other navbar links */
 .btn-whatsapp {
   display: flex;
@@ -49,9 +61,10 @@
   font-size: 16px; /* Match font size to navbar links */
   padding: 1rem; /* Match the padding to the navbar link padding */
   font-weight: 600;
-  border-radius: 5px; /* Add a slight border radius for a rounded button */
-  text-decoration: none; /* Ensure there's no underline on the link */
-  color: #777676; /* Set the text color to match navbar link color */
+  border-radius: 5px; /* Add slight border radius for rounded button */
+  text-decoration: none; /* Remove underline */
+  color: #777676; /* Set color to match navbar link color */
+  margin-left: 1rem; /* Ensure consistent spacing */
 }
 
 .btn-whatsapp:hover {
@@ -63,14 +76,7 @@
   color: inherit; /* Ensure the icon color matches the text color */
 }
 
-
-.navbar-nav .nav-item .nav-link {
-  font-weight: 600;
-  padding: 1rem; /* Ensure padding is consistent for nav links */
-}
-
-
-     /* Styling for the 'free shipping' bar */
+/* Styling for the 'free shipping' bar */
 .free-shipping-bar {
   background-color: #3D3D3D;
   color: #FFFFFF;
@@ -80,23 +86,26 @@
   font-weight: 600; /* Make the text bold */
 }
 
+/* Navbar responsive styling */
+@media (max-width: 991px) {
+  .navbar-nav {
+    text-align: center;
+  }
 
-      /* Navbar responsive styling */
-      @media (max-width: 991px) {
-        .navbar-nav {
-          text-align: center;
-        }
+  .navbar-nav .nav-item .nav-link {
+    padding: 0.5rem 0; /* Adjust padding for smaller screens */
+  }
 
-        .navbar-nav .nav-item .nav-link {
-          padding: 0.5rem 0; /* Adjust padding for smaller screens */
-        }
+  .btn-whatsapp {
+    margin-top: 10px; /* Add margin on mobile for better layout */
+  }
+}
 
-        .btn-whatsapp {
-          margin-top: 10px; /* Add margin on mobile for better layout */
-        }
-      }
     </style>
   </head>
+  <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <body>
     <!-- Free Shipping Banner -->
     <div class="free-shipping-bar">
@@ -150,7 +159,7 @@
             <li class="nav-item"><a class="nav-link @yield('home')" href="#">Gallery</a></li>
             <li class="nav-item"><a class="nav-link @yield('home')" href="#">Step Order</a></li>
             <li class="nav-item"><a class="nav-link @yield('home')" href="#">Info & Promotions</a></li>
-            <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('contacus') }}">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('ProductMain') }}">Contact Us</a></li>
           </ul>
 
           <!-- WhatsApp Button -->

@@ -203,17 +203,20 @@
 }
 
 /* Responsif untuk ukuran layar mobile */
-@@media (max-width: 767px) {
+@media (max-width: 767px) {
     /* Mengubah layout menjadi satu kolom di perangkat mobile */
     .content-container {
         flex-direction: column; /* Mengubah layout menjadi vertikal pada perangkat mobile */
         height: auto; /* Mengatur tinggi agar konten bisa menyesuaikan */
         padding: 0; /* Menghilangkan padding pada kontainer */
+        width: 100%; /* Menjamin lebar kontainer 100% pada layar kecil */
     }
 
     /* Menyesuaikan gambar agar tampil dengan baik pada layar kecil */
     .overlay-image {
-        height: 217px; /* Sesuaikan tinggi gambar dengan ukuran yang diinginkan */
+        width: 100%; /* Memastikan gambar tidak melebihi lebar layar */
+        height: auto; /* Menjaga aspek rasio gambar */
+        object-fit: cover;  /* Pastikan gambar tetap terpotong dengan baik */
     }
 
     /* Menyesuaikan ukuran teks di mobile */
@@ -229,12 +232,6 @@
         height: 50px; /* Menyesuaikan tinggi tombol */
     }
 
-    /* Mengatur ukuran gambar di mobile */
-    .overlay-image {
-        object-fit: cover;  /* Pastikan gambar tetap terpotong dengan baik */
-        height: 217px;       /* Menurunkan tinggi gambar di mobile */
-    }
-
     /* Mengatur posisi teks di pojok kiri bawah */
     .overlay-text {
         bottom: 20px; /* Menurunkan teks sedikit */
@@ -243,7 +240,11 @@
 
     /* Mengurangi padding bawah pada container */
     .container-fluid {
+        padding-left: 0;  /* Menghilangkan padding kiri */
+        padding-right: 0; /* Menghilangkan padding kanan */
         padding-bottom: 2px; /* Mengurangi padding bawah agar tombol lebih dekat ke konten */
+        max-width: 100%; /* Pastikan lebar kontainer tidak lebih dari layar */
+        box-sizing: border-box; /* Menjamin padding dihitung dalam lebar kontainer */
     }
 
     /* Menyesuaikan tinggi konten Office agar sejajar dengan Living Room dan Dining Room */
@@ -260,7 +261,13 @@
     .d-flex.justify-content-center {
         margin-top: 2px; /* Menyesuaikan jarak atas tombol */
     }
+
+    /* Menyembunyikan scroll horizontal */
+    body {
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+    }
 }
+
 
 
 
@@ -661,3 +668,6 @@ img {
   @include('components.footer')
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
