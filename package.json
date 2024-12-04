@@ -1,9 +1,11 @@
 {
     "private": true,
     "type": "module",
-    "scripts": {
-        "build": "webpack --mode production"
-    },
+    {
+        "scripts": {
+          "build": " build loista-website --output public"
+        }
+      },
     "devDependencies": {
         "autoprefixer": "^10.4.20",
         "axios": "^1.7.4",
