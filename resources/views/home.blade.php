@@ -7,7 +7,12 @@
 
     <!-- Menambahkan Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+
 
     <style>
 
@@ -86,20 +91,92 @@
             border-radius: 10px;
         }
 
+/* Tampilan Default untuk Desktop */
+@media (max-width: 768px) {
+  .carousel-indicators {
+    position: absolute;
+    bottom: 25px; /* Menurunkan indikator ke bawah lebih jauh */
+
+    display: flex;
+    justify-content: center; /* Menjaga indikator tetap terpusat */
+    align-items: center; /* Menjaga indikator berada di tengah secara vertikal */
+    z-index: 10;
+  }
+
+  .carousel-indicators button {
+
+    background-color: rgba(255, 255, 255, 0.7); /* Warna latar indikator */
+    border: none;
+    opacity: 0.7; /* Menurunkan opacity untuk efek transisi */
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Efek transisi */
+  }
+
+  .carousel-indicators .active {
+    background-color: rgba(255, 255, 255, 1); /* Warna latar belakang indikator yang aktif */
+    opacity: 1; /* Indikator aktif dengan opacity penuh */
+  }
+}
+
+
+
+
+
+
+
+/* CSS untuk mengatur ikon carousel */
+.carousel-control-prev, .carousel-control-next {
+font-size: 38px;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang tombol */
+  border-radius: 50%; /* Membuat tombol bulat */
+  padding: 10px; /* Menambahkan padding untuk jarak ikon dengan tepi tombol */
+  transition: background-color 0.3s ease; /* Efek transisi untuk background saat hover */
+}
+
+.carousel-control-prev i, .carousel-control-next i {
+  font-size: 30px; /* Ukuran ikon */
+  transition: color 0.3s ease; /* Efek transisi untuk warna ikon */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+  .carousel-control-prev, .carousel-control-next {
+    padding-top: 15px;
+
+  }
+
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 14px;
+    padding-top: 50px/* Mengurangi ukuran ikon untuk mobile */
+  }
+}
+
+/* Responsif untuk tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .carousel-control-prev, .carousel-control-next {
+    padding: 12px; /* Padding lebih kecil untuk tablet */
+  }
+
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 32px; /* Ukuran ikon sedikit lebih besar untuk tablet */
+  }
+}
+
+
+
+
+
+
     /* Styling untuk Tombol */
   .section-1 .btn-see-more {
-            display: flex;                  /* Menggunakan flexbox untuk tombol */
-    justify-content: center;        /* Menyusun teks di tengah secara horizontal */
-    align-items: center;            /* Menyusun teks di tengah secara vertikal */
-    background-color: #333333;         /* Atur warna latar belakang tombol */
-    color: white;                   /* Warna teks tombol */
-    padding: 10px 20px;             /* Padding tombol */
-    font-size: 14px;                /* Ukuran font */
-    text-decoration: none;          /* Menghilangkan garis bawah jika ada */
-    border-radius: 10px;             /* Membuat sudut tombol melengkung */
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
-    width: 224px;                   /* Lebar tetap tombol */
-    height: 37px;                   /* Tinggi tetap tombol */
+            display: flex;
+    justify-content: center;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 224px;
 }
 
         .section-1 .btn-see-more:hover {
@@ -512,14 +589,15 @@ img {
 
 
 
-    <!-- Left and right controls/icons -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-  </div>
+   <!-- Left and right controls/icons -->
+<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <i class='fas fa-chevron-circle-left' style='color:rgb(255, 255, 255)'></i>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <i class='fas fa-chevron-circle-right' style='color:rgb(255, 255, 255)'></i>
+  </button>
+</div>
+
 
 
     <!-- Konten Section 1 -->
