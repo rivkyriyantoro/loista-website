@@ -625,7 +625,7 @@ font-size: 38px;
     font-weight: 700;
     line-height: 1.2;
     word-wrap: break-word;
-    text-align: center;
+    text-align: left;
     font-size: 64px; /* Ukuran default */
 }
 
@@ -634,6 +634,8 @@ font-size: 38px;
     .responsive-text {
         font-size: 48px;
         text-align: left;
+
+
     }
 }
 
