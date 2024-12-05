@@ -94,6 +94,39 @@
         }
       }
 
+/* Gaya umum untuk container peta */
+.map-container {
+    width: 100%; /* Membuat kontainer memenuhi lebar layar */
+    overflow: hidden; /* Mencegah konten meluber */
+    padding: 10px 0; /* Memberikan padding agar peta tidak terlalu rapat dengan tepi */
+}
+
+/* Responsivitas untuk iframe agar sesuai dengan layar perangkat */
+.map-container iframe {
+    width: 100%; /* Menyesuaikan lebar iframe dengan lebar kontainer */
+    height: 200px; /* Ukuran default untuk peta */
+    max-width: 100%; /* Mencegah iframe melebar */
+    border-radius: 10px;
+}
+
+/* Responsivitas untuk layar tablet (<= 768px) */
+@media (max-width: 768px) {
+    .map-container iframe {
+        rou
+        width: 294px; /* Menyesuaikan lebar iframe dengan lebar kontainer */
+        height: 200px;/* Ukuran iframe lebih besar pada tablet untuk kenyamanan */
+        border-radius: 10px;
+    }
+}
+
+/* Responsivitas untuk layar ponsel (<= 480px) */
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 200px; /* Ukuran iframe dikurangi sedikit pada ponsel */
+    }
+}
+
+
       /* Copyright Styling */
       .box-copyright {
         background-color: #f8f9fa;

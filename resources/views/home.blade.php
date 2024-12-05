@@ -694,7 +694,10 @@ img {
     <div class="container section-4">
         <div class="row">
             <div style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex">
-                <div style="align-self: stretch; color: #333333; font-size: 40px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 48px; word-wrap: break-word">Info & Promotions</div>
+                <div class="container">
+                    <div class="title">Info & Promotions</div>
+                    <div class="divider"></div>
+                </div>
                 <div style="align-self: stretch; height: 1px; background: #999999"></div>
 
                 <!-- Section 1 -->
