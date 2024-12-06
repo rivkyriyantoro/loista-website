@@ -57,7 +57,7 @@
 
 /* Konten di bawah navbar */
 body {
-  padding-top: 12px; /* Memberikan ruang untuk navbar */
+  padding-top: 10px; /* Memberikan ruang untuk navbar */
 }
 
 /* Mengatur posisi dan tampilan elemen carousel */
