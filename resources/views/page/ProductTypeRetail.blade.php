@@ -14,6 +14,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 
+/* Default Navbar Style */
+.navbar {
+  position: relative; /* Posisi navbar sebelum scroll */
+  z-index: 1050; /* Pastikan navbar berada di atas elemen lain */
+}
+
+/* Navbar pada tampilan Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Menjadikan navbar tetap di atas saat scroll */
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* Bisa disesuaikan dengan warna navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+    transition: top 0.3s ease-in-out; /* Animasi smooth saat navbar dipindahkan */
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 60px; /* Mengatur jarak menu dari navbar */
+  }
+
+  /* Memberikan margin pada body agar konten tidak tertutup oleh navbar */
+  body {
+    margin-top: 60px; /* Sesuaikan dengan tinggi navbar */
+  }
+
+  .navbar-toggler {
+    z-index: 1060; /* Agar tombol hamburger tetap di atas navbar */
+  }
+}
+
+/* Navbar Floating saat Scroll */
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Efek shadow lebih kuat saat scroll */
+}
+
+/* Konten di bawah navbar */
+body {
+  padding-top: 60px; /* Memberikan ruang untuk navbar */
+}
+
+/* Mengatur posisi dan tampilan elemen carousel */
+.carousel-inner {
+  margin-top: 100px; /* Sesuaikan dengan tinggi navbar */
+}
 
 
 

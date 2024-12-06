@@ -16,6 +16,9 @@
 
     <style>
 
+
+
+
 /* carousel */
 .carousel-inner .carousel-item img {
   width: 100%;      /* Gambar mengisi lebar kontainer */
@@ -96,15 +99,13 @@
   .carousel-indicators {
     position: absolute;
     bottom: 25px; /* Menurunkan indikator ke bawah lebih jauh */
-
     display: flex;
     justify-content: center; /* Menjaga indikator tetap terpusat */
     align-items: center; /* Menjaga indikator berada di tengah secara vertikal */
-    z-index: 10;
+    z-index: 1050; /* Pastikan lebih tinggi dari navbar */
   }
 
   .carousel-indicators button {
-
     background-color: rgba(255, 255, 255, 0.7); /* Warna latar indikator */
     border: none;
     opacity: 0.7; /* Menurunkan opacity untuk efek transisi */
@@ -115,6 +116,11 @@
     background-color: rgba(255, 255, 255, 1); /* Warna latar belakang indikator yang aktif */
     opacity: 1; /* Indikator aktif dengan opacity penuh */
   }
+}
+
+/* Pastikan Navbar berada di atas carousel dengan z-index tinggi */
+.navbar {
+  z-index: 1050; /* Z-index untuk navbar */
 }
 
 

@@ -13,7 +13,81 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
     <style>
-      /* General styling */
+
+/* Default Navbar Style */
+.navbar {
+  position: relative; /* Posisi navbar sebelum scroll */
+  z-index: 1050; /* Pastikan navbar berada di atas elemen lain */
+}
+
+/* Navbar pada tampilan Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Menjadikan navbar tetap di atas saat scroll */
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* Bisa disesuaikan dengan warna navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+    transition: top 0.3s ease-in-out; /* Animasi smooth saat navbar dipindahkan */
+  }
+
+  .navbar-nav {
+    position: absolute;
+    top: 60px; /* Mengatur jarak menu dari navbar */
+  }
+
+  /* Memberikan margin pada body agar konten tidak tertutup oleh navbar */
+  body {
+    margin-top: 60px; /* Sesuaikan dengan tinggi navbar */
+  }
+
+  .navbar-toggler {
+    z-index: 1060; /* Agar tombol hamburger tetap di atas navbar */
+  }
+}
+
+/* Navbar Floating saat Scroll */
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Efek shadow lebih kuat saat scroll */
+}
+
+/* Konten di bawah navbar */
+body {
+  padding-top: 12px; /* Memberikan ruang untuk navbar */
+}
+
+/* Mengatur posisi dan tampilan elemen carousel */
+.carousel-inner {
+  margin-top: 100px; /* Sesuaikan dengan tinggi navbar */
+}
+
+
+
+/* Styling free shipping bar */
+.free-shipping-bar {
+  background-color: #28a745; /* Contoh warna latar belakang */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050; /* Pastikan berada di atas navbar */
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: block; /* Pastikan elemen ini ditampilkan */
+}
+
+.navbar {
+  margin-top: 35px; /* Memberikan jarak tambahan untuk menghindari tertutupnya navbar */
+}
+
+
+
     /* General styling */
 body {
   font-family: 'Plus Jakarta Sans', sans-serif; /* Make sure the font is applied */
@@ -76,6 +150,32 @@ body {
   color: inherit; /* Ensure the icon color matches the text color */
 }
 
+/* Responsif untuk tampilan mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .btn-whatsapp {
+    display: flex;
+  align-items: center;
+  font-size: 16px; /* Match font size to navbar links */
+  padding: 1rem; /* Match the padding to the navbar link padding */
+  font-weight: 600;
+  border-radius: 5px; /* Add slight border radius for rounded button */
+  text-decoration: none; /* Remove underline */
+  color: #777676; /* Set color to match navbar link color */
+/* Ensure consistent spacing */
+text-align: center;
+}
+
+  .btn-whatsapp i {
+    font-size: 18px; /* Ukuran ikon lebih kecil pada mobile */
+    margin-right: 8px; /* Mengurangi jarak antara ikon dan teks */
+  }
+
+  /* Efek hover untuk mobile */
+  .btn-whatsapp:hover {
+    color: #007bff; /* Warna saat hover di mobile */
+  }
+}
+
 /* Styling for the 'free shipping' bar */
 .free-shipping-bar {
   background-color: #3D3D3D;
@@ -96,9 +196,7 @@ body {
     padding: 0.5rem 0; /* Adjust padding for smaller screens */
   }
 
-  .btn-whatsapp {
-    margin-top: 10px; /* Add margin on mobile for better layout */
-  }
+
 }
 
     </style>
@@ -108,13 +206,14 @@ body {
 
   <body>
     <!-- Free Shipping Banner -->
-    <div class="free-shipping-bar">
-      FREE SHIPPING WITHIN JABODETABEK AREA!
-    </div>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
       <div class="container">
+        <a class="free-shipping-bar fixed-top" href="{{ route('home') }}" title="FREE SHIPPING WITHIN JABODETABEK AREA!"
+        style="text-decoration: none; color: #FFFFFF; font-size: 14px; padding: 0.5rem 0; text-align: center; font-weight: 600;">
+        FREE SHIPPING WITHIN JABODETABEK AREA!
+     </a>
         <!-- Logo -->
         <a class="navbar-brand" href="{{ route('home') }}">
           <img src="\img\logo.png" alt="Logo" height="50">
