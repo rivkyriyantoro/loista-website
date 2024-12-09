@@ -156,9 +156,9 @@ body {
             <!-- Company Profile -->
             <li class="nav-item"><a class="nav-link @yield('market')" href="{{ route('CompanyProfile') }}">Company Profile</a></li>
             <li class="nav-item"><a class="nav-link @yield('home')" href="#">Our Projects</a></li>
-            <li class="nav-item"><a class="nav-link @yield('home')" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('Gallery') }}">Gallery</a></li>
             <li class="nav-item"><a class="nav-link @yield('home')" href="#">Step Order</a></li>
-            <li class="nav-item"><a class="nav-link @yield('home')" href="#">Info & Promotions</a></li>
+            <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('InfoPromotions') }}">Info & Promotions</a></li>
             <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('ProductMain') }}">Contact Us</a></li>
           </ul>
 

@@ -5,12 +5,14 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SubcategoryController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\GalleryController;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Route;
 
 
 // Menambahkan rute home dengan nama 'home'
 // routes/web.php
+
 
 // Rute home
 Route::get('/home', function () {
@@ -46,6 +48,26 @@ Route::get('/ProductPerCatalog', function () {
 Route::get('/ProductDetail', function () {
     return view('page.ProductDetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
 })->name('ProductDetail');
+
+Route::get('/InfoPromotions', function () {
+    return view('page.InfoPromotions'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('InfoPromotions');
+
+Route::get('/BlogDetail', function () {
+    return view('page.BlogDetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('BlogDetail');
+
+Route::get('/Gallery', function () {
+    return view('page.Gallery'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('Gallery');
+
+Route::get('/gallery/{id}', function ($id) {
+    return view('page.GalleryDetail', ['id' => $id]);
+})->name('gallery.detail');
+
+// Route::get('/GalleryDetail', function () {
+//     return view('page.GalleryDetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+// })->name('GalleryDetail');
 
 // Halaman login dan yang memerlukan otentikasi
 Route::post('/login', [LoginController::class, 'login'])->name('login.admin');
