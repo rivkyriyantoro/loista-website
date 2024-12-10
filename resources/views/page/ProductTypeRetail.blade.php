@@ -14,70 +14,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 
-/* Default Navbar Style */
-.navbar {
-  position: relative; /* Posisi navbar sebelum scroll */
-  z-index: 1050; /* Pastikan navbar berada di atas elemen lain */
-}
-
-/* Navbar pada tampilan Mobile */
-@media (max-width: 768px) {
-  .navbar {
-    position: fixed; /* Menjadikan navbar tetap di atas saat scroll */
-    top: 0;
-    width: 100%;
-    background-color: #fff; /* Bisa disesuaikan dengan warna navbar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
-    transition: top 0.3s ease-in-out; /* Animasi smooth saat navbar dipindahkan */
-  }
-
-  .navbar-nav {
-    position: absolute;
-    top: 60px; /* Mengatur jarak menu dari navbar */
-  }
-
-  /* Memberikan margin pada body agar konten tidak tertutup oleh navbar */
-  body {
-    margin-top: 60px; /* Sesuaikan dengan tinggi navbar */
-  }
-
-  .navbar-toggler {
-    z-index: 1060; /* Agar tombol hamburger tetap di atas navbar */
-  }
-}
-
-/* Navbar Floating saat Scroll */
-.navbar.scrolled {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1050;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Efek shadow lebih kuat saat scroll */
-}
-
-/* Konten di bawah navbar */
-body {
-  padding-top: 60px; /* Memberikan ruang untuk navbar */
-}
-
-/* Mengatur posisi dan tampilan elemen carousel */
-.carousel-inner {
-  margin-top: 100px; /* Sesuaikan dengan tinggi navbar */
-}
-
-
-
     /* Styling untuk Konten Section 2 */
-    .section-2 {
-            padding: 3rem 0;
-            /* background-color: #f8f9fa; Warna latar belakang light */
-        }
+
 
         .section-2 .row {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
+            gap: 28px;
         }
 
         .section-2 .col-lg-6 img {
@@ -87,49 +31,13 @@ body {
             border-radius: 10px;
         }
 
-        .section-2 .text-box {
-            text-align: left;
-            max-width: 600px;
-        }
-
-        .section-2 .text-box h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-
-        }
-
-        .section-2 .text-box p {
-            font-size: 1.125rem;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Tombol See More pada Section 2 */
-        .section-2 .btn-see-more {
-            background-color: #703c2d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.125rem;
-            text-align: center;
-        }
-
-        .section-2 .btn-see-more:hover {
-            background-color: #5e2e1e;
-        }
-
-        .section-3 .btn-see-more i {
-
-        }
 
 
         /* Container untuk gambar dan overlay */
 .overlay-container {
   position: relative;
   width: 100%;
-  height: 500px; /* Anda bisa sesuaikan tinggi gambar sesuai kebutuhan */
+  height: 372px; /* Anda bisa sesuaikan tinggi gambar sesuai kebutuhan */
   overflow: hidden;
 }
 
@@ -170,20 +78,9 @@ body {
   margin-bottom: 10px;
   font-weight: bold;
 }
-
-.overlay-text p {
-  font-size: 1.25rem;
-}
+/* 
 
  /* Custom Styling untuk grid */
- .grid-item {
-      font-family: 'M PLUS 2 Variable', sans-serif;
-      background-color: lightgray;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-    }
 
  .section-2 {
     display: flex;
@@ -194,33 +91,8 @@ gap: 36px;
 
  }
 
-        /* Responsif untuk Section 2 */
-        @media (max-width: 991px) {
-            .section-2 .row {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-
-         /* Responsive design untuk ukuran layar kecil */
-         @media (max-width: 768px) {
-            .section-1 {
-                padding: 30px 15px;
-            }
-
-            .title-section h1 {
-                font-size: 48px;
-                line-height: 58px;
-            }
-
-            .text-box p {
-                font-size: 16px;
-                line-height: 19px;
-            }
-        }
 /* styel section 3*/
-/* Pastikan font yang digunakan mendukung font-weight 700 */
-.overlay-text1 {
+.overlay-text1 h2 {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -241,39 +113,18 @@ gap: 36px;
     }
 
     .overlay-image {
-        width: 370px;
-        height: 118px; /* Menyesuaikan ukuran gambar */
+        width: 1164px;
+        height: auto; /* Menyesuaikan ukuran gambar */
         object-fit: cover;
     }
 
     /* Ubah font-size teks */
-    .overlay-text1 {
+    .overlay-text1 h2  {
         font-size: 10px; /* Mengurangi ukuran font pada perangkat mobile */
         bottom: 10px;
         left: 10px;
     }
 
-    /* Mengubah ukuran dan posisi tombol "See other" */
-    div > .container > div {
-        padding: 8px 16px;
-        font-size: 12px;
-    }
-
-    div > .container > div > div {
-        font-size: 8px;
-    }
-}
-
-.section-2 .btn-see-more {
-    width: 100%; /* Ensure the button spans the full container width */
-    text-align: center;
-    background-color: #333333;
-    padding: 10px 28px;
-    border-radius: 10px;
-    color: #FAFAFA;
-    font-size: 14px;
-    font-weight: 600;
-    transition: background-color 0.3s;
 }
 
 .container {
@@ -286,75 +137,112 @@ gap: 36px;
   position: relative;
   width: 100%; /* Pastikan lebar kontainer 100% */
   max-width: 100%; /* Mencegah elemen melebihi lebar layar */
-  margin-bottom: 20px; /* Spasi antar elemen */
+  /* margin-bottom: 20px; Spasi antar elemen */
 }
 
 .overlay-image {
   width: 100%;
-  height: auto; /* Menjaga aspek rasio gambar */
+  height: auto;
   object-fit: cover; /* Menghindari gambar terdistorsi */
 }
 
-.overlay-text1 {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
-  font-size: 1.5em;
+/* Styling untuk Konten text2 */
+.responsive-breadcrumb {
+  width: 100%;
+  padding-top: 118px; /* Padding atas */
+  padding-bottom: 45px; /* Padding bawah */
+  display: flex;
+  justify-content: left; /* Menyusun teks di tengah */
+  align-items: left;
+}
+.responsive-container {
+  width: 100%;
+  height: 77px;
+  display: flex;
+
+
 }
 
+.responsive-text-h1 {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  font-size: 64px; /* Ukuran default untuk desktop */
+}
+
+.responsive-text-h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: normal;
+  font-size: 14px; /* Ukuran font default */
+  color: #707070;
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+/* Media query untuk mobile (max-width 768px) */
 @media (max-width: 768px) {
-  .overlay-text1 h2 {
-    font-size: 18px; /* Menyesuaikan ukuran teks di perangkat kecil */
+
+
+  .responsive-text {
+    font-size: 28px; /* Ukuran font lebih kecil di mobile */
+    line-height: 1.4;
+    text-align: center; /* Menyusun teks di tengah */
   }
+
+
+.responsive-breadcrumb {
+  width: 100%;
+  padding-top: 14px; /* Padding atas */
+  padding-bottom: 45px; /* Padding bawah */
+  display: flex;
+  justify-content: left; /* Menyusun teks di tengah */
+  align-items: left;
 }
-.content-container {
-        flex-direction: column; /* Mengubah layout menjadi vertikal pada perangkat mobile */
-        height: auto; /* Mengatur tinggi agar konten bisa menyesuaikan */
-        padding: 0; /* Menghilangkan padding pada kontainer */
-        width: 100%; /* Menjamin lebar kontainer 100% pada layar kecil */
-    }
 
-    /* Menyesuaikan gambar agar tampil dengan baik pada layar kecil */
-    .overlay-image {
-        width: 100%; /* Memastikan gambar tidak melebihi lebar layar */
-        height: auto; /* Menjaga aspek rasio gambar */
-        object-fit: cover;  /* Pastikan gambar tetap terpotong dengan baik */
-    }
+.responsive-text-h1 {
+  width: 100%;
+  height: 100%;
+  color: #333;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  text-align: left;
+  font-size: 32px;
 
-    /* Menyesuaikan ukuran teks di mobile */
-    .overlay-text h2 {
-        font-size: 2rem; /* Menurunkan ukuran font pada mobile */
-    }
+}
 
-
-    /* Gaya umum untuk elemen dengan teks */
-.responsive-text {
-    width: 100%;
-    color: #333;
-    font-family: 'Jura', sans-serif;
-    font-weight: 700;
-    line-height: 1.2;
-    word-wrap: break-word;
+.responsive-text-h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px; /* Ukuran font default */
+  color: #707070;
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+  text-align: left;
+}
+.overlay-text1 h2 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight:bold; /* Menebalkan font */
+    z-index: 2;
     text-align: left;
-    font-size: 64px; /* Ukuran default */
+    width: 90%;
+    word-wrap: break-word;
 }
 
-/* Responsivitas untuk layar kecil */
-@media (max-width: 768px) {
-    .responsive-text {
-        font-size: 48px;
-        text-align: left;
-
-
-    }
 }
 
-@media (max-width: 480px) {
-    .responsive-text {
-        font-size: 36px;
-    }
-}
+
+
 </style>
 
 </head>
@@ -363,10 +251,18 @@ gap: 36px;
     @include('components.navbar')
 
 
+
       <!-- section 3 -->
      <div class="container section-2">
-        <div style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 35px; display: inline-flex; padding-top: 100px;">
-            <div class="responsive-text">Retails</div>
+
+        <div class="responsive-breadcrumb">
+            <p class="responsive-text-h3">Product/Retail/</p>
+          </div>
+
+        <div class="responsive-container">
+            <p class="responsive-text-h1">Retails</p>
+          </div>
+
 
           <!-- Wardrobe -->
           <div class="overlay-container">

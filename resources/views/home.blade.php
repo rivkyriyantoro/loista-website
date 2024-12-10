@@ -53,8 +53,8 @@
 
  /* Styling untuk Konten Section 1 */
         .section-1 {
-            margin-top: 3rem;
-            padding: 2rem 0;
+            margin-top: 30px;
+
         }
 
         .section-1 .row {
@@ -83,7 +83,7 @@
         }
 
         .section-1 .text-box p {
-            font-size: 1rem;
+            font-size: 14px;
             color: #555;
         }
 
@@ -93,6 +93,20 @@
             object-fit: cover;
             border-radius: 10px;
         }
+
+        @media (max-width: 768px) {
+            .section-1 .col-lg-6 img {
+                width: 157px;
+                height: 66px;
+            }
+
+            .section-1 .text-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        }
+
 
 /* Tampilan Default untuk Desktop */
 @media (max-width: 768px) {
@@ -173,27 +187,45 @@ font-size: 38px;
 
 
     /* Styling untuk Tombol */
-  .section-1 .btn-see-more {
-            display: flex;
-    justify-content: center;
-    color: white;
-    padding: 10px 20px;
-    font-size: 14px;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    width: 224px;
+    .btn-see-more {
+    display: flex;                    /* Menggunakan flexbox untuk tombol */
+    justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+    align-items: center;              /* Menyusun teks di tengah secara vertikal */
+    background-color: #333333;        /* Warna latar belakang tombol */
+    color: white;                     /* Warna teks tombol */
+    padding: 10px 20px;                /* Padding atas/bawah 10px, kanan/kiri 20px */
+    font-size: 14px;                  /* Ukuran font */
+    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
+    border-radius: 10px;              /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
+    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
+    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    font-weight: 600;
 }
 
-        .section-1 .btn-see-more:hover {
-            background-color: #333333;
-        }
+
 
 
 
 /* Styling untuk Konten Section 2 */
 /* Kontainer utama */
+
+.featured-products {
+    width: 100%;
+    text-align: center;
+    color: #5C5C5C;
+    font-size: 48px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 57.60px;
+    word-wrap: break-word;
+    padding-top: 54px;
+    padding-bottom: 36px;
+}
+
 .content-container {
+    pading top: 22px;
     width: 100%; /* Agar kontainer memenuhi lebar layar */
     max-width: 100%; /* Membatasi lebar maksimal kontainer */
     height: 739px; /* Tinggi kontainer */
@@ -255,28 +287,146 @@ font-size: 38px;
     text-align: left; /* Menyusun teks ke kiri */
     width: 90%; /* Menjamin teks tidak keluar dari batas */
     word-wrap: break-word; /* Menghindari teks melampaui kontainer */
-}
-/* Tombol See All Catalog */
-.btn-see-more {
-    display: flex;                  /* Menggunakan flexbox untuk tombol */
-    justify-content: center;        /* Menyusun teks di tengah secara horizontal */
-    align-items: center;            /* Menyusun teks di tengah secara vertikal */
-    background-color: #333333;      /* Warna latar belakang tombol */
-    color: white;                   /* Warna teks tombol */
-    padding: 23px 20px 10px 20px;    /* Padding atas 23px, kanan/kiri 20px, bawah 10px */
-    font-size: 14px;                /* Ukuran font */
-    text-decoration: none;          /* Menghilangkan garis bawah jika ada */
-    border-radius: 10px;            /* Membuat sudut tombol melengkung */
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
-    width: auto;                    /* Lebar tombol mengikuti lebar teks */
-    height: 37px;                   /* Tinggi otomatis mengikuti isi tombol */
-    margin: 0 auto;                 /* Membuat tombol terletak di tengah secara horizontal */
+
 }
 
-/* Tombol Hover */
-.btn-see-more:hover {
-    background-color: #383434;      /* Warna tombol saat hover */
+.btn-see-all{
+display: flex;                    /* Menggunakan flexbox untuk tombol */
+    justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+    align-items: center;              /* Menyusun teks di tengah secara vertikal */
+    background-color: #333333;        /* Warna latar belakang tombol */
+    color: white;                     /* Warna teks tombol */
+    padding: 10px 20px;                /* Padding atas/bawah 10px, kanan/kiri 20px */
+    font-size: 14px;                  /* Ukuran font */
+    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
+    border-radius: 10px;              /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
+    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
+    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    font-weight: 600;
 }
+
+   /* Mengatur posisi teks di pojok kiri bawah */
+   .overlay-text {
+        bottom: 20px; /* Menurunkan teks sedikit */
+        left: 15px;   /* Memberikan margin kiri */
+    }
+
+    /* Mengurangi padding bawah pada container */
+    .container-fluid {
+        padding-left: 0;  /* Menghilangkan padding kiri */
+        padding-right: 0; /* Menghilangkan padding kanan */
+        padding-bottom: 2px; /* Mengurangi padding bawah agar tombol lebih dekat ke konten */
+        max-width: 100%; /* Pastikan lebar kontainer tidak lebih dari layar */
+        box-sizing: border-box; /* Menjamin padding dihitung dalam lebar kontainer */
+    }
+
+    /* Menyesuaikan tinggi konten Office agar sejajar dengan Living Room dan Dining Room */
+    . .overlay-container {
+       right-column height: 720px; /* Sesuaikan tinggi konten Office */
+    }
+
+    /* Mengurangi margin bawah pada Office */
+    .right-column {
+        margin-bottom: 20px; /* Mengurangi jarak bawah pada kolom Office */
+    }
+
+    /* Mengatur jarak antara tombol dan konten */
+    .d-flex.justify-content-center {
+        margin-top: 2px; /* Menyesuaikan jarak atas tombol */
+    }
+
+    /* Menyembunyikan scroll horizontal */
+    body {
+        overflow-x: hidden; /* Mencegah scroll horizontal */
+    }
+
+
+
+@media (max-width: 768px) {
+
+    .content-container{
+        display: flex;
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center;    /* Memusatkan secara vertikal */
+
+    }
+    .left-column {
+        width: 370px; /* Lebar kolom kanan */
+    height: 216px; /* Menyesuaikan tinggi kolom kanan */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Kolom Kanan (Office) */
+.right-column {
+    width: 370px; /* Lebar kolom kanan */
+    height: 216px; /* Menyesuaikan tinggi kolom kanan */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gambar Overlay */
+.overlay-container {
+    position: center;
+    width: 370px; /* Lebar kolom kanan */
+    height: 216px; /* Menyesuaikan tinggi kolom kanan */
+    overflow: hidden;
+}
+
+/* Gambar di dalam overlay */
+.overlay-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Agar gambar mengisi kontainer tanpa distorsi */
+}
+
+/* Overlay gelap di atas gambar */
+.overlay-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+    z-index: 1; /* Agar overlay berada di atas gambar */
+}
+
+/* Teks di pojok kiri bawah */
+.overlay-text {
+    position: absolute;
+    bottom: 20px; /* Menempatkan teks 20px dari bawah */
+    left: 20px;   /* Menempatkan teks 20px dari kiri */
+    color: white;
+    font-size: 2.5rem; /* Ukuran teks */
+    font-weight: bold;
+    z-index: 2; /* Teks berada di atas overlay */
+    text-align: left; /* Menyusun teks ke kiri */
+    width: 90%; /* Menjamin teks tidak keluar dari batas */
+    word-wrap: break-word; /* Menghindari teks melampaui kontainer */
+
+  }
+/* Tombol See All Catalog */
+.btn-see-all {
+    display: flex;                    /* Menggunakan flexbox untuk tombol */
+    justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+    align-items: center;              /* Menyusun teks di tengah secara vertikal */
+    background-color: #333333;        /* Warna latar belakang tombol */
+    color: white;                     /* Warna teks tombol */
+    padding: 10px 20px;                /* Padding atas/bawah 10px, kanan/kiri 20px */
+    font-size: 14px;                  /* Ukuran font */
+    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
+    border-radius: 10px;              /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
+    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
+    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    font-weight: 600;
+}
+
+
 
 /* Mengatur posisi tombol di tengah */
 .d-flex.justify-content-center {
@@ -284,9 +434,24 @@ font-size: 38px;
     justify-content: center;  /* Menjaga tombol tetap di tengah */
     align-items: center;      /* Vertikal center */
 }
+}
 
 /* Responsif untuk ukuran layar mobile */
 @media (max-width: 767px) {
+
+    .featured-products {
+    width: 100%;
+    text-align: center;
+    color: #5C5C5C;
+    font-size: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 57.60px;
+    word-wrap: break-word;
+    padding-top: 54px;
+    padding-bottom: 36px;
+}
+
     /* Mengubah layout menjadi satu kolom di perangkat mobile */
     .content-container {
         flex-direction: column; /* Mengubah layout menjadi vertikal pada perangkat mobile */
@@ -304,52 +469,29 @@ font-size: 38px;
 
     /* Menyesuaikan ukuran teks di mobile */
     .overlay-text h2 {
-        font-size: 2rem; /* Menurunkan ukuran font pada mobile */
+        font-size: 20px; /* Menurunkan ukuran font pada mobile */
     }
 
     /* Tombol See All Catalog */
     .btn-see-more {
-        font-size: 16px; /* Menyesuaikan ukuran font */
-        padding: 15px 30px; /* Mengatur padding lebih besar */
-        width: auto; /* Lebar tombol mengikuti ukuran teks */
-        height: 50px; /* Menyesuaikan tinggi tombol */
-    }
-
-    /* Mengatur posisi teks di pojok kiri bawah */
-    .overlay-text {
-        bottom: 20px; /* Menurunkan teks sedikit */
-        left: 15px;   /* Memberikan margin kiri */
-    }
-
-    /* Mengurangi padding bawah pada container */
-    .container-fluid {
-        padding-left: 0;  /* Menghilangkan padding kiri */
-        padding-right: 0; /* Menghilangkan padding kanan */
-        padding-bottom: 2px; /* Mengurangi padding bawah agar tombol lebih dekat ke konten */
-        max-width: 100%; /* Pastikan lebar kontainer tidak lebih dari layar */
-        box-sizing: border-box; /* Menjamin padding dihitung dalam lebar kontainer */
-    }
-
-    /* Menyesuaikan tinggi konten Office agar sejajar dengan Living Room dan Dining Room */
-    .right-column .overlay-container {
-        height: 217px; /* Sesuaikan tinggi konten Office */
-    }
-
-    /* Mengurangi margin bawah pada Office */
-    .right-column {
-        margin-bottom: 20px; /* Mengurangi jarak bawah pada kolom Office */
-    }
-
-    /* Mengatur jarak antara tombol dan konten */
-    .d-flex.justify-content-center {
-        margin-top: 2px; /* Menyesuaikan jarak atas tombol */
-    }
-
-    /* Menyembunyikan scroll horizontal */
-    body {
-        overflow-x: hidden; /* Mencegah scroll horizontal */
-    }
+    display: flex;                    /* Menggunakan flexbox untuk tombol */
+    justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+    align-items: center;              /* Menyusun teks di tengah secara vertikal */
+    background-color: #333333;        /* Warna latar belakang tombol */
+    color: white;                     /* Warna teks tombol */
+    padding: 10px 20px;                /* Padding atas/bawah 10px, kanan/kiri 20px */
+    font-size: 14px;                  /* Ukuran font */
+    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
+    border-radius: 10px;              /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    min-width: 188px; /* Lebar minimal */
+    min-height: 40px; /* Tinggi minimal */             /* Tinggi otomatis mengikuti isi tombol */
+    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    font-weight: 600;
 }
+    }
+
+
 
 
 
@@ -360,7 +502,7 @@ font-size: 38px;
  /* Styling untuk Konten Section 3 */
 /* Default Styles */
 .project-title {
-    color: #333333;
+    color: #323131;
     font-size: 48px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
@@ -385,57 +527,71 @@ font-size: 38px;
     font-size: 18px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 600;
-    line-height: 21.60px;
-    padding-bottom: 23px;
+}
+
+/* Styling untuk kolom gambar */
+.col-12.d-flex.justify-content-center {
+    padding-top: 20px; /* Jarak atas */
+    padding-bottom: 20px; /* Jarak bawah */
+    display: flex; /* Mengatur flexbox */
+    justify-content: center; /* Memusatkan konten secara horizontal */
+}
+
+/* Styling untuk gambar */
+.project-image {
+    max-width: 100%; /* Gambar responsif (tidak lebih besar dari kontainer) */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 8px; /* Membuat sudut gambar melengkung */
+    object-fit: cover; /* Gambar tetap proporsional */
 }
 
 
-
-
-/* Responsive Design for Mobile (Below 768px) */
 @media (max-width: 767px) {
     .project-title {
-        font-size: 24px; /* Smaller font size on mobile */
-        line-height: 70px; /* Adjust line height for mobile */
-        padding-top: 10px;
-        padding-bottom: 2px;
-    }
-
-    .project-subtitle {
-        font-size: 18px; /* Adjust subtitle size */
-        line-height: 24px; /* Adjust line height for mobile */
-        padding-bottom: 2px;
-    }
-
-    .project-description {
-        font-size: 16px; /* Smaller text for mobile */
-        line-height: 20px; /* Adjust line height for better readability */
-        padding-bottom: 7px;
-    }
-
-    .project-image {
-        max-width: 100%; /* Ensure image is responsive */
-        height: auto;
-    }
-}
-
-Responsive Design for Tablets (768px - 1024px)
-@media (min-width: 768px) and (max-width: 1024px) {
-    .project-title {
-        font-size: 40px;
-        line-height: 48px;
-    }
-
-    .project-subtitle {
+        color: #323131;
         font-size: 24px;
-        line-height: 28px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: bold;
+      
+    }
+
+    .project-subtitle {
+        color: #7A7474;
+        font-size: 18px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        margin-bottom: 15px; /* Jarak bawah */
     }
 
     .project-description {
-        font-size: 18px;
-        line-height: 22px;
+        color: #333333;
+        font-size: 16px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        margin-bottom: 20px; /* Jarak bawah */
+    }
+
+    /* Styling untuk kolom gambar */
+    .col-12.d-flex.justify-content-center {
+        padding-top: 30px; /* Jarak atas */
+        padding-bottom: 30px; /* Jarak bawah */
+        display: flex; /* Mengatur flexbox */
+        justify-content: center; /* Memusatkan konten secara horizontal */
+    }
+
+    /* Styling untuk gambar */
+    .project-image {
+        max-width: 100%; /* Gambar responsif (tidak lebih besar dari kontainer) */
+        height: auto; /* Menjaga proporsi gambar */
+        border-radius: 8px; /* Membuat sudut gambar melengkung */
+        object-fit: cover; /* Gambar tetap proporsional */
+        margin-top: 10px; /* Tambahkan jarak atas */
+        margin-bottom: 10px; /* Tambahkan jarak bawah */
     }
 }
+
+
+
 
 
  /* Styling untuk Konten Section 4 */
@@ -559,6 +715,217 @@ img {
 }
 
 
+/* Styling untuk kontainer utama */
+.container.section-3 {
+    display: flex;
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    align-items: center;    /* Memusatkan konten secara vertikal */
+    padding: 20px 0;        /* Tambahkan padding atas dan bawah */
+}
+
+
+
+
+.container.section-4 {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    te
+}
+
+.info-promotions {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.title {
+    text-align: left;
+    font-size: 28px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: #232E52;
+}
+
+.divider {
+    height: 2px;
+    background: #232E52;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+.content-section {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-content {
+    text-align: left;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 610px;
+}
+
+.text-details {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.date {
+    text-align: left;
+    color: #232E52;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.headline {
+    text-align: left;
+    color: #5C5C5C;
+    font-size: 28px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 33.6px;
+    word-wrap: break-word;
+}
+
+.description {
+    text-align: left;
+    color: #232E52;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 19.2px;
+}
+
+.content-image {
+    width: 400px;
+    height: 210px;
+    border-radius: 8px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 767px) {
+    .container.section-4 {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    te
+}
+
+.info-promotions {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+}
+
+.title {
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: #232E52;
+}
+
+.divider {
+    height: 2px;
+    background: #232E52;
+    width: 100%;
+    margin-top: 10px;
+}
+
+
+
+.content-section {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-content {
+    text-align: left;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 610px;
+}
+
+.text-details {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.date {
+    text-align: left;
+    color: #232E52;
+    font-size: 12px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 16.8px;
+}
+
+.headline {
+    text-align: left;
+    color: #5C5C5C;
+    font-size: 18px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    line-height: 33.6px;
+    word-wrap: break-word;
+}
+
+.description {
+    text-align: left;
+    color: #232E52;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 400;
+    line-height: 19.2px;
+}
+
+.content-image {
+    width: 370px;
+    height: 198px;
+    border-radius: 8px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+}
+
+
 
     </style>
 </head>
@@ -610,7 +977,7 @@ img {
     <div class="container section-1">
         <div class="row">
             <!-- Kolom Gambar -->
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-4 img1">
                 <img src="/img/logo.png" alt="Produk Unggulan" class="img-fluid custom-img">
             </div>
 
@@ -626,9 +993,11 @@ img {
         </div>
     </div>
 
+    <div class="featured-products">Featured Products</div>
 
      <!-- Konten Section 2 -->
      <div class="content-container">
+
         <!-- Kolom Kiri (Living Room + Dining Room) -->
         <div class="left-column">
             <!-- Living Room Section -->
@@ -659,9 +1028,10 @@ img {
         </div>
     </div>
 
+
    <!-- Tombol See All Catalog -->
 <div class="d-flex justify-content-center mt-4">
-    <a href="#" class="btn-see-more">See All Catalog</a>
+    <a href="#" class="btn-see-all">See All Catalog</a>
 </div>
 
 
@@ -688,70 +1058,73 @@ img {
         </div>
 
         <!-- Image Section -->
-        <div class="col-12 d-flex justify-content-center" style="padding-top: 20px; padding-bottom: 20px;">
-            <img class="img-fluid project-image" src="\img\section 88.png" />
+        <div class="col-12 d-flex justify-content-center">
+            <img class="img-fluid project-image" src="\img\section 88.png" alt="Project Image" />
         </div>
+
+
     </div>
 </div>
 
 
 <!-- Konten Section 4 -->
 
-    <div class="container section-4">
-        <div class="row">
-            <div style="width: 100%; height: 100%; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex">
-                <div class="container">
-                    <div class="title">Info & Promotions</div>
-                    <div class="divider"></div>
-                </div>
-                <div style="align-self: stretch; height: 1px; background: #999999"></div>
-
-                <!-- Section 1 -->
-                <div style="align-self: stretch; justify-content: center; align-items: center; gap: 60px; display: flex; flex-wrap: wrap; justify-content: space-between;">
-                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex; max-width: 610px;">
-                        <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; display: flex">
-                            <div style="text-align: center; color: #232E52; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 16.80px; word-wrap: break-word">August 13, 2021 </div>
-                            <div style="color: #5C5C5C; font-size: 28px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 33.60px; word-wrap: break-word">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</div>
-                        </div>
-                        <div style="color: #232E52; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 19.20px; word-wrap: break-word">
-                            Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
-                        </div>
-                    </div>
-                    <img style="width: 400px; height: 210px; border-radius: 8px; max-width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1579547657324-aafb76ea4198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </div>
-
-                <!-- Section 2 -->
-                <div style="align-self: stretch; justify-content: center; align-items: center; gap: 60px; display: flex; flex-wrap: wrap; justify-content: space-between;">
-                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex; max-width: 610px;">
-                        <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; display: flex">
-                            <div style="text-align: center; color: #232E52; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 16.80px; word-wrap: break-word">August 13, 2021 </div>
-                            <div style="color: #5C5C5C; font-size: 28px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 33.60px; word-wrap: break-word">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</div>
-                        </div>
-                        <div style="color: #232E52; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 19.20px; word-wrap: break-word">
-                            Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
-                        </div>
-                    </div>
-                    <img style="width: 400px; height: 210px; border-radius: 8px; max-width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1579547657324-aafb76ea4198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </div>
-
-                <!-- Section 3 -->
-                <div style="align-self: stretch; justify-content: center; align-items: center; gap: 60px; display: flex; flex-wrap: wrap; justify-content: space-between;">
-                    <div style="flex: 1 1 0; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex; max-width: 610px;">
-                        <div style="flex-direction: column; justify-content: center; align-items: flex-start; gap: 6px; display: flex">
-                            <div style="text-align: center; color: #232E52; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 16.80px; word-wrap: break-word">August 13, 2021 </div>
-                            <div style="color: #5C5C5C; font-size: 28px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 33.60px; word-wrap: break-word">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</div>
-                        </div>
-                        <div style="color: #232E52; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 19.20px; word-wrap: break-word">
-                            Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
-                        </div>
-                    </div>
-                    <img style="width: 400px; height: 210px; border-radius: 8px; max-width: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1579547657324-aafb76ea4198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
-                </div>
-
-                <div style="align-self: stretch; height: 1px; background: #999999"></div>
+<div class="container section-4">
+    <div class="row">
+        <div class="info-promotions">
+            <div class="container">
+                <div class="title">Info & Promotions</div>
+                <div class="divider"></div>
             </div>
+            <div class="horizontal-line"></div>
+
+            <!-- Section 1 -->
+            <div class="content-section">
+                <div class="text-content">
+                    <div class="text-details">
+                        <div class="date">August 13, 2021</div>
+                        <div class="headline">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</div>
+                    </div>
+                    <div class="description">
+                        Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
+                    </div>
+                </div>
+                <img class="content-image" src="https://images.unsplash.com/photo-1579547657324-aafb76ea4198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Section Image">
+            </div>
+
+            <!-- Section 2 -->
+            <div class="content-section">
+                <div class="text-content">
+                    <div class="text-details">
+                        <div class="date">August 13, 2021</div>
+                        <div class="headline">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</div>
+                    </div>
+                    <div class="description">
+                        Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
+                    </div>
+                </div>
+                <img class="content-image" src="https://images.unsplash.com/photo-1579547657324-aafb76ea4198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Section Image">
+            </div>
+
+            <!-- Section 3 -->
+            <div class="content-section">
+                <div class="text-content">
+                    <div class="text-details">
+                        <div class="date">August 13, 2021</div>
+                        <div class="headline">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers</div>
+                    </div>
+                    <div class="description">
+                        Redefined the user acquisition and redesigned the onboarding experience, all within 3 working weeks.
+                    </div>
+                </div>
+                <img class="content-image" src="https://images.unsplash.com/photo-1579547657324-aafb76ea4198?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Section Image">
+            </div>
+
+            <div class="horizontal-line"></div>
         </div>
     </div>
+</div>
+
 
 
   <!-- Menyertakan Navbar -->

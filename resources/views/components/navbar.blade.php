@@ -31,15 +31,6 @@
     transition: top 0.3s ease-in-out; /* Animasi smooth saat navbar dipindahkan */
   }
 
-  .navbar-nav {
-    position: absolute;
-    top: 60px; /* Mengatur jarak menu dari navbar */
-  }
-
-  /* Memberikan margin pada body agar konten tidak tertutup oleh navbar */
-  body {
-    margin-top: 60px; /* Sesuaikan dengan tinggi navbar */
-  }
 
   .navbar-toggler {
     z-index: 1060; /* Agar tombol hamburger tetap di atas navbar */
@@ -55,10 +46,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Efek shadow lebih kuat saat scroll */
 }
 
-/* Konten di bawah navbar */
-body {
-  padding-top: 10px; /* Memberikan ruang untuk navbar */
-}
+
 
 /* Mengatur posisi dan tampilan elemen carousel */
 .carousel-inner {
@@ -69,7 +57,7 @@ body {
 
 /* Styling free shipping bar */
 .free-shipping-bar {
-  background-color: #28a745; /* Contoh warna latar belakang */
+  background-color: #3D3D3D; /* Contoh warna latar belakang */
   width: 100%;
   position: fixed;
   top: 0;
@@ -83,15 +71,16 @@ body {
 }
 
 .navbar {
-  margin-top: 35px; /* Memberikan jarak tambahan untuk menghindari tertutupnya navbar */
+  margin-top: 35px;
 }
-
 
 
     /* General styling */
 body {
   font-family: 'Plus Jakarta Sans', sans-serif; /* Make sure the font is applied */
+/* padding-top: 40px */
 }
+
 
 /* Custom navbar styles */
 .navbar {
@@ -141,18 +130,16 @@ body {
   margin-left: 1rem; /* Ensure consistent spacing */
 }
 
-.btn-whatsapp:hover {
+.btn-whatsapp :hover {
   color: #007bff; /* Add hover effect to match navbar link hover color */
 }
 
-.btn-whatsapp i {
-  margin-right: 10px;
-  color: inherit; /* Ensure the icon color matches the text color */
-}
+
 
 /* Responsif untuk tampilan mobile (max-width: 768px) */
 @media (max-width: 768px) {
-  .btn-whatsapp {
+
+  .btn-whatsapp  {
     display: flex;
   align-items: center;
   font-size: 16px; /* Match font size to navbar links */
@@ -161,10 +148,15 @@ body {
   border-radius: 5px; /* Add slight border radius for rounded button */
   text-decoration: none; /* Remove underline */
   color: #777676; /* Set color to match navbar link color */
-/* Ensure consistent spacing */
 text-align: center;
 }
 
+.fab fa-whatsapp{
+    font-size: 18px; /* Ukuran ikon lebih kecil pada mobile */
+    margin-right: 8px; /* Mengurangi jarak antara ikon dan teks */
+  }
+
+}
   .btn-whatsapp i {
     font-size: 18px; /* Ukuran ikon lebih kecil pada mobile */
     margin-right: 8px; /* Mengurangi jarak antara ikon dan teks */
@@ -195,8 +187,6 @@ text-align: center;
   .navbar-nav .nav-item .nav-link {
     padding: 0.5rem 0; /* Adjust padding for smaller screens */
   }
-
-
 }
 
     </style>
@@ -205,7 +195,7 @@ text-align: center;
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <body>
-    <!-- Free Shipping Banner -->
+
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
@@ -244,7 +234,7 @@ text-align: center;
                   <li><a class="dropdown-item" href="#">TV Cabinet</a></li>
                   <li><a class="dropdown-item" href="#">Wall Panel</a></li>
                   <li><a class="dropdown-item" href="#">Others</a></li>
-                  <li><h6 class="dropdown-header">Retail</h6></li>
+                  <li><h6 class="dropdown-header" href="{{ route('ProductTypeRetail') }}">Retail</h6></li>
                   <li><a class="dropdown-item" href="#">Sofa</a></li>
                   <li><a class="dropdown-item" href="#">Bench</a></li>
                   <li><a class="dropdown-item" href="#">Coffee Table</a></li>
@@ -268,6 +258,7 @@ text-align: center;
         </div>
       </div>
     </nav>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

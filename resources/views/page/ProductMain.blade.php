@@ -553,6 +553,8 @@ font-size: 38px;
     }
 }
 
+
+
 .section-2 .btn-see-more {
     width: 100%; /* Ensure the button spans the full container width */
     text-align: center;
