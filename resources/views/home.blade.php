@@ -507,7 +507,8 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
     line-height: 57.60px;
-
+    padding-bottom: 23px;
+    padding-top: 78px;
 
 
 }
@@ -551,6 +552,8 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
         font-size: 24px;
         font-family: 'Plus Jakarta Sans', sans-serif;
         font-weight: bold;
+        padding-bottom: 0px;
+        padding-top: 0px;
 
     }
 
