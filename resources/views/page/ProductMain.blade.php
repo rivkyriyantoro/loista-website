@@ -15,6 +15,7 @@
 
     <style>
 
+<<<<<<< Updated upstream
   /* Mengatur font dan gaya untuk seluruh halaman */
   body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -47,6 +48,143 @@
             text-align: justify;
             margin-top: 20px;
         }
+=======
+/* Carousel Styles */
+
+/* Desktop Styles (default) */
+.carousel-inner .carousel-item img {
+  width: 100%;
+  height: 456px;
+  object-fit: cover;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  font-size: 38px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev i, .carousel-control-next i {
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .carousel-inner .carousel-item img {
+    width: 390px;
+    height: 124px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    padding-top: 15px;
+  }
+
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 14px;
+    padding-top: 50px;
+  }
+}
+
+/* Tablet Styles (max-width: 1024px and min-width: 769px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .carousel-inner .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    padding: 12px;
+  }
+
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 32px;
+  }
+}
+
+
+
+/* Styling untuk judul */
+
+/* Gaya untuk kontainer section-1 */
+.container-fluid.section-1 {
+    display: block; /* Kontainer mengalir seperti normal block */
+    max-width: 1164px; /* Maksimal lebar kotak */
+   padding-top: 78px;
+    box-sizing: border-box; /* Memastikan padding masuk dalam ukuran */
+}
+
+/* Gaya untuk Judul h4 */
+.title-section h4 {
+    color: var(--Primary-Primary, #333); /* Gunakan warna default jika tidak ada var */
+    font-family: 'Jura', sans-serif; /* Pastikan font Jura sudah benar */
+    font-size: 64px; /* Ukuran font besar untuk heading */
+    font-style: normal; /* Tidak menggunakan italic */
+    font-weight: 600; /* Berat font tebal */
+    line-height: 120%; /* Menjaga proporsi antara ukuran font dan tinggi baris */
+    margin: 0; /* Menghilangkan margin atas/bawah */
+    text-align: left; /* Posisi teks ke kiri */
+}
+
+/* Gaya untuk Judul h1 */
+.title-section h1 {
+    color: #333333; /* Warna teks gelap */
+    font-size: 64px; /* Ukuran font besar */
+    font-weight: 700; /* Berat font lebih tebal */
+    line-height: 76.8px; /* Jarak antar baris */
+    margin: 0; /* Menghilangkan margin */
+}
+
+/* Gaya untuk teks paragraf */
+.text-box p {
+    color: #383434; /* Warna teks sedikit lebih terang */
+    font-size: 18px; /* Ukuran font untuk teks biasa */
+    font-weight: 400; /* Berat font normal */
+    line-height: 21.6px; /* Menjaga jarak antara baris */
+    text-align: justify; /* Meratakan teks */
+    margin-top: 20px; /* Jarak atas */
+}
+
+/* Gaya untuk tombol "Hubungi Kami" */
+.btn-see-more {
+    display: inline-block;
+    background: #333333; /* Latar belakang tombol gelap */
+    color: #fafafa; /* Teks tombol berwarna putih */
+    font-size: 14px; /* Ukuran font tombol */
+    font-weight: 600; /* Berat font agak tebal */
+    padding: 10px 28px; /* Jarak dalam tombol */
+    border-radius: 10px; /* Sudut tombol bulat */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    margin-top: 20px; /* Jarak atas tombol */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+@media (max-width: 768px) {
+
+    .container-fluid.section-1 {
+    display: block; /* Kontainer mengalir seperti normal block */
+    max-width: 370px; /* Maksimal lebar kotak */
+    box-sizing: border-box; /* Memastikan padding masuk dalam ukuran */
+}
+            .title-section h4 {
+                font-size: 36px;
+            }
+
+            .text-box p {
+                font-size: 16px;
+            }
+
+            .btn-see-more {
+                font-size: 12px;
+                padding: 8px 20px;
+            }
+        }
+
+/* Styling untuk Konten Section 1 */
+>>>>>>> Stashed changes
 
         /* Gaya untuk tombol "Hubungi Kami" */
         .btn-see-more {
@@ -281,6 +419,204 @@ gap: 36px;
                 line-height: 19px;
             }
         }
+<<<<<<< Updated upstream
+=======
+
+
+
+
+ /* Styling untuk Konten Section 1 */
+        .section-1 {
+            margin-top: 3rem;
+            padding: 2rem 0;
+        }
+
+        .section-1 .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .section-1 .col-lg-6 {
+            margin-bottom: 1rem;
+            max-width: 600px;
+        }
+
+        .section-1 .text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-1 .text-box h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .section-1 .text-box p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .section-1 .col-lg-6 img {
+            width: 407px;
+            height: 172px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+
+
+
+/
+
+
+
+/* styel section 3*/
+/* Pastikan font yang digunakan mendukung font-weight 700 */
+.overlay-text1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 40px;
+    font-weight:bold; /* Menebalkan font */
+    z-index: 2;
+    text-align: left;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+/* Responsive untuk perangkat mobile */
+@media screen and (max-width: 768px) {
+    /* Ubah ukuran gambar */
+    .overlay-container {
+        height: 118px; /* Ukuran gambar lebih kecil pada mobile */
+    }
+
+    .overlay-image {
+        width: 370px;
+        height: 118px; /* Menyesuaikan ukuran gambar */
+        object-fit: cover;
+    }
+
+    /* Ubah font-size teks */
+    .overlay-text1 {
+        font-size: 10px; /* Mengurangi ukuran font pada perangkat mobile */
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* Mengubah ukuran dan posisi tombol "See other" */
+    div > .container > div {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    div > .container > div > div {
+        font-size: 8px;
+    }
+}
+
+
+
+.section-2 .btn-see-more {
+    width: 100%; /* Ensure the button spans the full container width */
+    text-align: center;
+    background-color: #333333;
+    padding: 10px 28px;
+    border-radius: 10px;
+    color: #FAFAFA;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-container {
+  position: relative;
+  width: 100%; /* Pastikan lebar kontainer 100% */
+  max-width: 100%; /* Mencegah elemen melebihi lebar layar */
+  margin-bottom: 20px; /* Spasi antar elemen */
+}
+
+.overlay-image {
+  width: 100%;
+  height: auto; /* Menjaga aspek rasio gambar */
+  object-fit: cover; /* Menghindari gambar terdistorsi */
+}
+
+.overlay-text1 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+  .overlay-text1 h2 {
+    font-size: 18px; /* Menyesuaikan ukuran teks di perangkat kecil */
+  }
+}
+.content-container {
+        flex-direction: column; /* Mengubah layout menjadi vertikal pada perangkat mobile */
+        height: auto; /* Mengatur tinggi agar konten bisa menyesuaikan */
+        padding: 0; /* Menghilangkan padding pada kontainer */
+        width: 100%; /* Menjamin lebar kontainer 100% pada layar kecil */
+    }
+
+    /* Menyesuaikan gambar agar tampil dengan baik pada layar kecil */
+    .overlay-image {
+        width: 100%; /* Memastikan gambar tidak melebihi lebar layar */
+        height: auto; /* Menjaga aspek rasio gambar */
+        object-fit: cover;  /* Pastikan gambar tetap terpotong dengan baik */
+    }
+
+    /* Menyesuaikan ukuran teks di mobile */
+    .overlay-text h2 {
+        font-size: 2rem; /* Menurunkan ukuran font pada mobile */
+    }
+
+
+    /* Gaya umum untuk elemen dengan teks */
+.responsive-text {
+    width: 100%;
+    color: #333;
+    font-family: 'Jura', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 64px; /* Ukuran default */
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+    .responsive-text {
+        font-size: 48px;
+        text-align: left;
+
+
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-text {
+        font-size: 36px;
+    }
+}
+
+
+>>>>>>> Stashed changes
     </style>
 </head>
 <body>
@@ -304,9 +640,8 @@ gap: 36px;
     </div>
 
 
-
-        <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+ <!-- Carousel -->
+ <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
     <!-- Indicators/dots -->
     <div class="carousel-indicators">

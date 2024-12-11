@@ -13,7 +13,64 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
     <style>
+<<<<<<< Updated upstream
       /* General styling */
+=======
+
+/* Default Navbar Style */
+
+
+/* Navbar pada tampilan Mobile */
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed; /* Menjadikan navbar tetap di atas saat scroll */
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* Bisa disesuaikan dengan warna navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Menambahkan shadow */
+    transition: top 0.3s ease-in-out; /* Animasi smooth saat navbar dipindahkan */
+  }
+
+
+  .navbar-toggler {
+    z-index: 1060; /* Agar tombol hamburger tetap di atas navbar */
+  }
+}
+
+/* Navbar Floating saat Scroll */
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Efek shadow lebih kuat saat scroll */
+}
+
+
+
+
+
+/* Styling free shipping bar */
+.free-shipping-bar {
+  background-color: #3D3D3D; /* Contoh warna latar belakang */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050; /* Pastikan berada di atas navbar */
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  display: block; /* Pastikan elemen ini ditampilkan */
+}
+
+.navbar {
+  margin-top: 35px;
+}
+
+
+>>>>>>> Stashed changes
     /* General styling */
 body {
   font-family: 'Plus Jakarta Sans', sans-serif; /* Make sure the font is applied */

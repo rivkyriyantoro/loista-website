@@ -12,36 +12,62 @@
     <style>
 
 /* carousel */
+
+/* Desktop Styles (default) */
 .carousel-inner .carousel-item img {
-  width: 100%;      /* Gambar mengisi lebar kontainer */
-  height: 456px;    /* Tinggi tetap 456px */
-  object-fit: cover; /* Menjaga aspek rasio gambar dan mengisi kotak tanpa merusak proporsi */
+  width: 100%;
+  height: 456px;
+  object-fit: cover;
 }
 
-/* carousel mobie? */
+.carousel-control-prev, .carousel-control-next {
+  font-size: 38px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev i, .carousel-control-next i {
+  font-size: 30px;
+  transition: color 0.3s ease;
+}
+
+/* Mobile Styles (max-width: 768px) */
 @media (max-width: 768px) {
-  /* Mengatur gambar carousel agar di-crop dan di-zoom sesuai ukuran */
-  .carousel-inner .carousel-item img {
-    width: 390px;
-    height: 124px;
-    object-fit: cover;  /* Crop dan zoom gambar untuk memenuhi ukuran yang diinginkan */
-    margin: 0 auto;     /* Mengatur gambar agar tetap berada di tengah */
+
+    .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+
+  .carousel-control-prev, .carousel-control-next {
+    padding-top: 15px;
   }
 
-  /* Mengubah ukuran gambar placeholder untuk mobile */
-  .carousel-item img {
-    width: 390px;
-    height: 124px;
-    object-fit: cover;  /* Crop dan zoom gambar placeholder agar sesuai ukuran */
-    margin: 0 auto;
-  }
-
-  /* Mengubah ukuran tombol navigasi pada layar kecil */
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 14px;
+    padding-top: 50px;
   }
 }
+
+/* Tablet Styles (max-width: 1024px and min-width: 769px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+
+
+  .carousel-control-prev, .carousel-control-next {
+    padding: 12px;
+  }
+
+  .carousel-control-prev i, .carousel-control-next i {
+    font-size: 32px;
+  }
+}
+
+
 
  /* Styling untuk Konten Section 1 */
         .section-1 {
@@ -86,6 +112,35 @@
             border-radius: 10px;
         }
 
+<<<<<<< Updated upstream
+=======
+        @media (max-width: 768px) {
+            .section-1 .col-lg-6 img {
+                width: 157px;
+                height: 66px;
+            }
+
+            .section-1 .text-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
     /* Styling untuk Tombol */
   .section-1 .btn-see-more {
             display: flex;                  /* Menggunakan flexbox untuk tombol */
@@ -486,8 +541,9 @@ img {
     <!-- Menyertakan Navbar -->
     @include('components.navbar')
 
-    <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+ <!-- Carousel -->
+ <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
