@@ -116,7 +116,7 @@
     display: flex;
     justify-content: center; /* Menjaga indikator tetap terpusat */
     align-items: center; /* Menjaga indikator berada di tengah secara vertikal */
-    z-index: 1050; /* Pastikan lebih tinggi dari navbar */
+
   }
 
   .carousel-indicators button {
@@ -133,9 +133,6 @@
 }
 
 /* Pastikan Navbar berada di atas carousel dengan z-index tinggi */
-.navbar {
-  z-index: 1050; /* Z-index untuk navbar */
-}
 
 
 
@@ -224,7 +221,7 @@ font-size: 38px;
     padding-bottom: 36px;
 }
 
-.content-container {
+.content-fupo {
     pading top: 22px;
     width: 100%; /* Agar kontainer memenuhi lebar layar */
     max-width: 100%; /* Membatasi lebar maksimal kontainer */
@@ -249,7 +246,7 @@ font-size: 38px;
 }
 
 /* Gambar Overlay */
-.overlay-container {
+.overlay-fupo {
     position: relative;
     width: 100%; /* Memastikan gambar mengisi lebar kontainer */
     height: 100%; /* Memastikan gambar mengisi tinggi kontainer */
@@ -264,7 +261,7 @@ font-size: 38px;
 }
 
 /* Overlay gelap di atas gambar */
-.overlay-container::after {
+.overlay-fupo::after {
     content: '';
     position: absolute;
     top: 0;
@@ -323,7 +320,7 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
     }
 
     /* Menyesuaikan tinggi konten Office agar sejajar dengan Living Room dan Dining Room */
-    . .overlay-container {
+    . .overlay-fupo {
        right-column height: 720px; /* Sesuaikan tinggi konten Office */
     }
 
@@ -346,7 +343,7 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
 
 @media (max-width: 768px) {
 
-    .content-container{
+    .content-fupo{
         display: flex;
     justify-content: center; /* Memusatkan secara horizontal */
     align-items: center;    /* Memusatkan secara vertikal */
@@ -368,7 +365,7 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
 }
 
 /* Gambar Overlay */
-.overlay-container {
+.overlay-fupo {
     position: center;
     width: 370px; /* Lebar kolom kanan */
     height: 216px; /* Menyesuaikan tinggi kolom kanan */
@@ -383,7 +380,7 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
 }
 
 /* Overlay gelap di atas gambar */
-.overlay-container::after {
+.overlay-fupo::after {
     content: '';
     position: absolute;
     top: 0;
@@ -453,7 +450,7 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
 }
 
     /* Mengubah layout menjadi satu kolom di perangkat mobile */
-    .content-container {
+    .content-fupo {
         flex-direction: column; /* Mengubah layout menjadi vertikal pada perangkat mobile */
         height: auto; /* Mengatur tinggi agar konten bisa menyesuaikan */
         padding: 0; /* Menghilangkan padding pada kontainer */
@@ -546,7 +543,7 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .project-title {
         color: #323131;
         font-size: 24px;
@@ -595,23 +592,16 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
 
 
 
-
  /* Styling untuk Konten Section 4 */
 
 /* Mengatur layout dan tampilan kontainer utama */
-.container.section-4 {
-    width: 100%;
+.containerBlog {
+    max-width:100%; ;
     padding: 20px;
 }
 
-.row {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
 /* Mengatur judul dan garis pemisah */
-.container.section-4 > div > div:first-child {
+.container.Blog > div > div:first-child {
     color: #333333;
     font-size: 40px;
     font-family: 'Plus Jakarta Sans', sans-serif;
@@ -620,15 +610,15 @@ display: flex;                    /* Menggunakan flexbox untuk tombol */
     word-wrap: break-word;
 }
 
-.container.section-4 > div > div:nth-child(2) {
+.container.Blog > div > div:nth-child(2) {
     height: 1px;
     background: #999999;
 }
 
 /* Mengatur Section (Konten Info dan Promosi) */
-.container.section-4 > div > div:nth-child(3),
-.container.section-4 > div > div:nth-child(4),
-.container.section-4 > div > div:nth-child(5) {
+.container.Blog > div > div:nth-child(3),
+.container.Blog > div > div:nth-child(4),
+.container.Blog > div > div:nth-child(5) {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -642,12 +632,9 @@ img {
 }
 
 /* Menyesuaikan ukuran gambar di tampilan mobile */
-/* Menyesuaikan ukuran gambar di tampilan mobile */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     /* Layout Kontainer dan Judul */
-    .container.section-4 {
-        padding: 10px;
-    }
+
 
     /* Mengubah Flexbox menjadi satu kolom di mobile */
     .row {
@@ -656,44 +643,34 @@ img {
         gap: 20px;
     }
 
-    /* Memastikan teks di atas gambar memiliki ruang yang cukup */
-    .container.section-4 > div > div:first-child {
-        font-size: 28px; /* Mengurangi ukuran font judul untuk mobile */
-        line-height: 36px; /* Menyesuaikan jarak antar baris */
-        text-align: left; /* Menyelaraskan teks ke kiri */
-    }
 
     /* Mengatur gambar untuk responsif */
     img {
-        width: 100%; /* Mengatur lebar gambar agar sesuai dengan lebar layar */
+        max-width: 100%; /* Gambar responsif (tidak lebih besar dari kontainer) */
         height: auto; /* Memastikan gambar proporsional */
-        max-width: 100%; /* Agar gambar tidak melebihi lebar kontainer */
         object-fit: cover;
     }
 
     /* Mengurangi ukuran teks di bawah judul */
-    .container.section-4 .row > div > div:nth-child(2) {
+    .container.Blog .row > div > div:nth-child(2) {
         font-size: 14px; /* Menurunkan ukuran font teks */
         line-height: 18px; /* Menyesuaikan tinggi baris */
     }
 
     /* Menambahkan padding dan margin untuk pemisah garis */
-    .container.section-4 > div > div:nth-child(2) {
+    .container.Blog > div > div:nth-child(2) {
         margin: 10px 0; /* Menambahkan jarak atas dan bawah garis pemisah */
     }
 
     /* Mengatur lebar kontainer informasi */
-    .container.section-4 .row > div {
+    .container.Blog .row > div {
         width: 100%; /* Memastikan kolom mengisi lebar penuh */
     }
 
-    /* Menambahkan margin antara teks dan gambar */
-    .container.section-4 .row > div > div:nth-child(2) {
-        margin-bottom: 10px; /* Menambahkan jarak bawah pada teks */
-    }
+
 
     /* Menyelaraskan semua elemen pada center */
-    .container.section-4 .row > div {
+    .container.Blog .row > div {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -701,17 +678,17 @@ img {
     }
 
     /* Mengatur urutan gambar ke atas menggunakan Flexbox */
-    .container.section-4 .row > div img {
+    .container.Blog .row > div img {
         order: -1; /* Memindahkan gambar ke atas di perangkat mobile */
     }
 
     /* Mengatur teks agar rata kiri */
-    .container.section-4 .row > div > div:nth-child(2) {
+    .container.Blog .row > div > div:nth-child(2) {
         text-align: left; /* Menyelaraskan teks ke kiri */
     }
 
     /* Pengaturan jarak antar Section */
-    .container.section-4 > div > div {
+    .container.Blog > div > div {
         gap: 20px; /* Menambah jarak antar section */
     }
 }
@@ -728,13 +705,17 @@ img {
 
 
 
-.container.section-4 {
+.container.Blog {
+    max-width: 1164px; /* Pastikan elemen induk memiliki lebar yang sesuai */
     text-align: left;
-    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 20px;
-    te
+    max-width: 1164px;
+
+
 }
 
 .info-promotions {
@@ -744,7 +725,7 @@ img {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    width: 100%;
+    max-width: 1164px;
 }
 
 .title {
@@ -764,7 +745,7 @@ img {
 
 
 
-.content-section {
+.content-post {
     text-align: left;
     display: flex;
     align-items: center;
@@ -819,21 +800,21 @@ img {
 }
 
 .content-image {
-    width: 400px;
+
     height: 210px;
     border-radius: 8px;
     max-width: 100%;
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
-    .container.section-4 {
+@media (max-width: 768px) {
+    .container,.Blog {
     text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    te
+
 }
 
 .info-promotions {
@@ -863,7 +844,7 @@ img {
 
 
 
-.content-section {
+.content-post {
     text-align: left;
     display: flex;
     align-items: center;
@@ -918,14 +899,16 @@ img {
 }
 
 .content-image {
-    width: 370px;
+    width: 100%;
     height: 198px;
     border-radius: 8px;
-    max-width: 100%;
+
     object-fit: cover;
 }
 
 }
+
+
 
 
 
@@ -998,12 +981,12 @@ img {
     <div class="featured-products">Featured Products</div>
 
      <!-- Konten Section 2 -->
-     <div class="content-container">
+     <div class="content-fupo">
 
         <!-- Kolom Kiri (Living Room + Dining Room) -->
         <div class="left-column">
             <!-- Living Room Section -->
-            <div class="overlay-container">
+            <div class="overlay-fupo">
                 <img class="overlay-image" src="https://images.unsplash.com/photo-1720048169987-2fd6bd1bf2b4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Living Room">
                 <div class="overlay-text">
                     <h2>Living Room</h2>
@@ -1011,7 +994,7 @@ img {
             </div>
 
             <!-- Dining Room Section -->
-            <div class="overlay-container">
+            <div class="overlay-fupo">
                 <img class="overlay-image" src="https://images.unsplash.com/photo-1731370963535-aa6e57ed40f6?q=80&w=1884&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dining Room">
                 <div class="overlay-text">
                     <h2>Dining Room</h2>
@@ -1021,7 +1004,7 @@ img {
 
         <!-- Kolom Kanan (Office) -->
         <div class="right-column">
-            <div class="overlay-container">
+            <div class="overlay-fupo">
                 <img class="overlay-image" src="https://images.unsplash.com/photo-1719937206333-dceea3c5564d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Office">
                 <div class="overlay-text">
                     <h2>Office</h2>
@@ -1071,17 +1054,17 @@ img {
 
 <!-- Konten Section 4 -->
 
-<div class="container section-4">
-    <div class="row">
+<div class="container Blog d-flex justify-content-center align-items-center">
+    <div class="row w-101">
         <div class="info-promotions">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="title">Info & Promotions</div>
                 <div class="divider"></div>
             </div>
             <div class="horizontal-line"></div>
 
             <!-- Section 1 -->
-            <div class="content-section">
+            <div class="content-post">
                 <div class="text-content">
                     <div class="text-details">
                         <div class="date">August 13, 2021</div>
@@ -1095,7 +1078,7 @@ img {
             </div>
 
             <!-- Section 2 -->
-            <div class="content-section">
+            <div class="content-post">
                 <div class="text-content">
                     <div class="text-details">
                         <div class="date">August 13, 2021</div>
@@ -1109,7 +1092,7 @@ img {
             </div>
 
             <!-- Section 3 -->
-            <div class="content-section">
+            <div class="content-post">
                 <div class="text-content">
                     <div class="text-details">
                         <div class="date">August 13, 2021</div>
