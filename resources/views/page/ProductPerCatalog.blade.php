@@ -120,6 +120,9 @@
 
 /* Responsif untuk mobile */
 @media (max-width: 767px) {
+    .product-container .product-card {
+        width: 48%; 
+}
   .product-title {
     font-size: 16px;
   }
@@ -422,7 +425,8 @@
         </div>
     </div>
 
-   
+
+
 
 
     <script>
