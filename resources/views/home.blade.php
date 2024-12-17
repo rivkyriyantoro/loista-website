@@ -18,21 +18,22 @@
 
 
 
- /* Styling untuk carousel */
+ /* Default untuk Desktop */
 .carousel-inner .carousel-item img {
-    width: 100%; /* Membuat gambar mengisi lebar kontainer */
-    height: 456px; /* Menetapkan tinggi gambar agar sesuai dengan 456px */
-    object-fit: cover; /* Menjaga proporsi gambar tanpa distorsi */
+    width: 100%; /* Lebar penuh */
+    height: 456px; /* Tinggi khusus desktop */
+    object-fit: cover; /* Menyesuaikan gambar */
 }
 
-
-/* Media query untuk layar medium ke atas */
-@media (min-width: 768px) {
+/* Responsif untuk Mobile (max-width: 768px) */
+@media (max-width: 767px) {
   .carousel-inner .carousel-item img {
-    height: auto;
-    object-fit: contain;
+    height: 200px; /* Sesuaikan tinggi untuk perangkat kecil */
+    object-fit: cover; /* Menjaga proporsi gambar */
   }
 }
+
+
 
 
 
@@ -862,7 +863,8 @@ img {
           <i class="fas fa-chevron-circle-right" style="color:rgb(255, 255, 255); font-size: 2rem;"></i>
           <span class="visually-hidden">Next</span>
         </button>
-    </div>
+      </div>
+
 
 
 
@@ -883,7 +885,7 @@ img {
                     Our commitment is to consistently deliver excellent service with high-quality products that breathe new life and warmth into every space. PT LO:ISTA Indonesia prides itself on infusing a modern, exclusive touch into every product, from kitchens, living rooms, dining areas, bedrooms, and offices to decorative accessories.
                     To ensure the best service, PT LO:ISTA Indonesia operates a showroom in a strategic location in Tangerang. We offer comprehensive solutions for furniture, home interior design, and decoration to meet your creative needs.
                 </p>
-                <a href="#" class="btn-see-more">See About Our Company</a>
+                <a href="#" class="btn-see-more mt-4">See About Our Company</a>
             </div>
         </div>
     </div>

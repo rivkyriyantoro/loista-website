@@ -32,7 +32,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       gap: 7px;
-    
+
     }
 
    .title-proma {
@@ -98,10 +98,36 @@
     }
 }
 
-.carousel-image {
-  object-fit: cover; /* Memastikan gambar tetap terpotong dengan baik */
-  margin height: 456px;/* Tentukan tinggi gambar agar sesuai dengan ukuran yang diinginkan */
-  width: 100%; /* Memastikan gambar menyesuaikan lebar kontainer */
+
+.btn-other {
+    display: flex;
+    justify-content: center;    /* Centers the content horizontally */
+    align-items: center;        /* Centers the content vertically */
+    margin: 0 auto;             /* Centers the button itself */
+    text-align: center;         /* Ensures the text inside the button is centered */
+    background-color: #333333;        /* Warna latar belakang tombol */
+    color: white;                     /* Warna teks tombol */
+    font-size: 14px;                  /* Ukuran font */
+    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
+    border-radius: 10px;              /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
+    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
+    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .btn-other {
+        justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+        align-items: center;
+    }
+}
+
+.carousel-inner .carousel-item img {
+    width: 100%; /* Lebar penuh */
+    height: 456px; /* Tinggi khusus desktop */
+    object-fit: cover; /* Menyesuaikan gambar */
 }
 
 @media (max-width: 768px) {
@@ -385,7 +411,9 @@ color: #707070;
     <!-- Menyertakan Navbar -->
     @include('components.navbar')
 
-    <div class="container mt-5">
+ 
+
+        <div class="container">
         <!-- Header Proma Section -->
         <div class="header-proma mb-5">
             <div class="title-proma">
@@ -398,6 +426,7 @@ color: #707070;
                 <br><br>
                 Start your consultation now by contacting our Customer Service team or visit our showroom to experience it firsthand and speak with our design specialists.
             </div>
+        </div>
         </div>
 
         <div class="container">
@@ -419,13 +448,13 @@ color: #707070;
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100 h-auto" alt="...">
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100 h-456px" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100 h-auto" alt="...">
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100 h-456px" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100 h-auto" alt="...">
+                <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100 h-456px" alt="...">
               </div>
             </div>
 
@@ -439,6 +468,7 @@ color: #707070;
               <span class="visually-hidden">Next</span>
             </button>
         </div>
+
 
 
 
@@ -495,7 +525,7 @@ color: #707070;
         <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-12 text-center mb-3">
-                    <a href="#" class="btn-hubungi ">Hubungi Kami</a>
+                    <a href="#" class="btn-other ">See other</a>
                 </div>
             </div>
         </div>

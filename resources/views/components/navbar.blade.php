@@ -76,8 +76,7 @@
         color: #007bff;
       }
 
-      /* Styling untuk Free Shipping Bar pada Desktop */
-     /* Styling untuk Free Shipping Bar pada Desktop */
+
 .free-shipping-bar {
   background-color: #3D3D3D;
   color: #FFFFFF;
@@ -148,10 +147,36 @@
         /* Navbar Branding */
         .navbar .navbar-brand img {
           height: 50px;
+          padding-left: 1rem;
         }
-
-
       }
+
+
+      /* Styling khusus untuk layar di bawah 729px */
+@media (max-width: 768px) {
+
+
+
+  .navbar-toggler {
+    margin-left: auto; /* Pastikan hamburger tetap berada di kanan */
+  }
+
+  .navbar-brand img {
+    max-height: 40px; /* Kurangi tinggi logo agar lebih pas di layar kecil */
+  }
+
+  .carousel-inner .carousel-item img {
+    height: 200px; /* Kurangi tinggi gambar carousel untuk layar kecil */
+    object-fit: cover; /* Tetap menjaga proporsi gambar */
+  }
+
+  body {
+    margin-top: 40px; /* Pastikan konten tidak tertutup oleh free-shipping-bar */
+  }
+}
+
+
+
     </style>
   </head>
 

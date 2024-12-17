@@ -20,17 +20,16 @@
 <style>
 
 .content-wrapper {
-  width: 100%;
-  height: 100%;
-  padding-top: 128px;
-  padding-bottom: 129px;
-  padding-left: 279px;
-  padding-right: 278px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-size: cover;
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+  height: 300px; /* Tinggi elemen */
+  width: 100%; /* Lebar elemen */
+  display: flex; /* Menggunakan Flexbox untuk konten */
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
 }
+
 
 /* Gaya untuk teks judul */
 .title-CF {
@@ -64,6 +63,17 @@
     line-height: 45px; /* Menyesuaikan line-height */
   }
 }
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 20px; /* Ukuran font untuk perangkat sangat kecil */
+  }
+
+  .sub-title {
+    font-size: 16px; /* Subtitle lebih kecil di layar kecil */
+  }
+}
+
 
 
 /* Styling untuk card produk */
@@ -121,7 +131,7 @@
 /* Responsif untuk mobile */
 @media (max-width: 767px) {
     .product-container .product-card {
-        width: 48%; 
+        width: 48%;
 }
   .product-title {
     font-size: 16px;
@@ -130,7 +140,6 @@
     font-size: 14px;
   }
 
-  /* Gambar produk menyesuaikan lebar layar pada mobile */
   .product-image {
     width: 100%;
     height: auto;
@@ -138,10 +147,6 @@
 }
 
 
-
-
-
-/* styles.css */
 
 /* Gaya untuk judul utama */
 .title {
@@ -249,10 +254,12 @@
 <body>
     @include('components.navbar')
 
-    <div class="container mt-5">
-        <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="container headercat">
+        <div class="row justify-content-center align-items-center ">
           <div class="col-12 text-center">
             <div class="content-wrapper">
+                <img alt="Meja Ruang Keluarga Zupa Loista" class="product-image" src="https://storage.googleapis.com/a1aa/image/kGaqdsvPbTobENUUJLYxaMtc6awm9YtRfLFJJuWB30a6vO7JA.jpg"/>
+
               <div class="title-CF">
                 Coffee Table
               </div>
@@ -261,23 +268,31 @@
         </div>
       </div>
 
-      <div class="container mt-5">
-        <div class="row justify-content-start align-items-end gap-3">
-          <div class="col-12 col-md-auto text-start">
-            <div class="title">Coffee Table Furniture</div>
+
+
+      <div class="container" style="margin-top: 84px;">
+        <div class="row justify-content-start align-items-end pb-5">
+          <!-- Title -->
+          <div class="col-12 col-md-auto text-md-start text-center">
+            <div class="title fs-1 fs-md-2">Coffee Table Furniture</div>
           </div>
-          <div class="col-12 col-md-auto text-center">
-            <div class="sub-title">(27 product)</div>
+
+          <!-- Subtitle -->
+          <div class="col-12 col-md-auto text-center text-md-center">
+            <div class="sub-title fs-6">(27 products)</div>
           </div>
         </div>
       </div>
+
+
+
 
       <div class="container mt-5">
         <div class="row justify-content-between align-items-center">
           <!-- Produk 1 -->
           <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Lemari Pakaian" class="img-fluid" />
+            <div class="product-card" style="max-width: 450px;">
+              <img src="https://images.unsplash.com/photo-1672096107096-8319c81b099a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="Lemari Pakaian" class="img-fluid" />
               <div class="product-info">
                 <div class="product-title">Lemari Pakaian Corrado High Loista</div>
                 <div class="product-price">IDR 13.500.000</div>

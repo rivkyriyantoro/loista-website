@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Product Detail</title>
 
     <!-- Menambahkan Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -15,7 +15,26 @@
 
     <style>
 
-  /* Mengatur font dan gaya untuk seluruh halaman */
+        .breadcrumb {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px; /* Jarak antar item breadcrumb */
+        }
+
+        .breadcrumb-item a {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 14px;
+        color: #707070;
+        }
+
+        .breadcrumb-item.active {
+        font-weight: bold;
+        color: #333333;
+        }
+
+
+
   body {
             font-family: 'Plus Jakarta Sans', sans-serif;
         }
@@ -259,13 +278,13 @@ gap: 36px;
  .product-image {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
+
         }
         .product-details {
             padding: 20px;
-            background-color: #fff;
+        
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
         }
         .product-title {
             font-size: 28px;
@@ -303,20 +322,18 @@ gap: 36px;
             padding: 12px 20px;
             margin-top: 20px;
             width: 100%;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
+            border-radius: 30px;
+            font-weight: 700;
         }
         .btn-custom-2 {
             background-color: #838383;
-            color: #fff;
+            color: #000000;
             border: none;
             padding: 12px 20px;
             margin-top: 20px;
             width: 100%;
-            border-radius: 5px;
-            text-transform: uppercase;
-            font-weight: bold;
+            border-radius: 30px;
+            font-weight: 700;
         }
 
         .btn-custom:hover {
@@ -372,21 +389,31 @@ gap: 36px;
     @include('components.navbar')
 
 
-  <!-- Memuat CSS Bootstrap -->
-    <div class="container section-1">
-        <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
-            <div style="color: #707070; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Product/</div>
-            <div style="color: #707070; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Retails/</div>
-            <div style="color: #707070; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 16.80px; word-wrap: break-word">Coffee Table</div>
-        </div>
-    </div>
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb d-flex justify-content-start align-items-center">
+            <li class="breadcrumb-item text-nowrap">
+              <a href="#" class="text-decoration-none text-muted">Product</a>
+            </li>
+            <li class="breadcrumb-item text-nowrap">
+              <a href="#" class="text-decoration-none text-muted">Retails</a>
+            </li>
+            <li class="breadcrumb-item active text-nowrap" aria-current="page">
+              Coffee Table
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+
+
 
   <!-- Memuat CSS Bootstrap -->
 
     <div class="container mt-5">
         <div class="product-container">
             <div class="col-md-6">
-                <img alt="Meja Ruang Keluarga Zupa Loista" class="product-image" src="https://storage.googleapis.com/a1aa/image/kGaqdsvPbTobENUUJLYxaMtc6awm9YtRfLFJJuWB30a6vO7JA.jpg"/>
+                <img alt="Meja Ruang Keluarga Zupa Loista" class="product-image" src="images\products\image 9.jpg"/>
             </div>
             <div class="col-md-6 product-details">
                 <div class="product-title">
@@ -417,33 +444,46 @@ gap: 36px;
         </div>
     </div>
 
-    <div class="container section-2">
-        <div style="width: 100%; color: #333333; font-size: 32px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 38.40px; word-wrap: break-word">Other product in the catalog</div>
-    </div>
-    <div class="container section-3" style="padding-bottom: 440px;">
-        <div style="width: 100%; height: 100%; justify-content: space-between; align-items: center; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Lemari Pakaian Corrado High Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  13.500.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Makan Trio Loista Indonesia</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  4.750.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Ruang Keluarga Zulu Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR 4,000,000</div>
-                </div>
-            </div>
+
+    <div class="container mt-5">
+        <div class="product-catalog" style="font-size: 32px; font-weight: 700">
+            <p>
+                Other product in the catalog
+            </p>
         </div>
+    </div>
+
+
+    <div class="container mt-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="bird">
+        <div class="col">
+          <div class="card h-100">
+            <img src="images\products\image 2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images\products\image 3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="images\products\image 4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
 

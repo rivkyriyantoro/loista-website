@@ -110,7 +110,6 @@
   }
 }
 
-/* Default styling untuk deskripsi dan gambar */
 .description-text {
   color: #474747;
   font-size: 28px;
@@ -122,15 +121,13 @@
   text-align: center;
 }
 
-/* Gambar Logo dengan ukuran maksimal */
 img {
-  max-width: 100%; /* Membuat gambar responsif */
-  height: auto; /* Memastikan proporsi gambar tetap terjaga */
+  max-width: 100%;
+  height: auto;
 }
 
-/* Styling untuk container tentang */
 .container-tentang {
-  display: block; /* Pastikan padding bekerja */
+  display: block;
   padding-top: 62px;
   padding-bottom: 62px;
   max-width: 1129px;
@@ -151,14 +148,14 @@ img {
 
 .logo-img {
     padding-left: 46px;
-  max-width: 202px;  /* Menentukan lebar maksimal gambar */
-  height: auto;      /* Memastikan tinggi gambar tetap proporsional */
+  max-width: 202px;
+  height: auto;
 }
 
 
 @media (max-width: 768px) {
   .description-text-tentang {
-    font-size: 20px; /* Ukuran font lebih kecil di layar mobile */
+    font-size: 20px;
     line-height: 24px;
     padding: 0 15px;
     text-align: left;
@@ -169,34 +166,31 @@ img {
 
 
 
-/* Styling untuk kontainer deskripsi lengkap */
 .container-deskripsi-lengkap {
-  padding-top: 30px;     /* Memberikan jarak atas pada kontainer */
-  padding-bottom: 30px;  /* Memberikan jarak bawah pada kontainer */
-  max-width: 1129px;     /* Lebar maksimal untuk kontainer */
-  margin: 0 auto;        /* Memastikan kontainer tetap di tengah */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  max-width: 1129px;
+  margin: 0 auto;
 }
 
-/* Styling untuk teks dalam deskripsi */
 .container-deskripsi-lengkap .text-secondary {
-  color: #474747;         /* Warna teks */
-  font-size: 28px;         /* Ukuran font untuk teks */
-  font-family: 'Plus Jakarta Sans', sans-serif;  /* Font yang digunakan */
-  font-style: italic;      /* Membuat teks miring */
-  font-weight: 400;        /* Berat font normal */
-  line-height: 1.5;        /* Jarak antar baris teks */
-  word-wrap: break-word;   /* Memungkinkan kata panjang untuk terpotong dan melanjutkan ke baris berikutnya */
-  text-align: justify;     /* Membuat teks rata kiri dan kanan */
-  padding: 0 15px;         /* Memberikan padding kiri dan kanan */
+  color: #474747;
+  font-size: 28px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+  word-wrap: break-word;
+  text-align: justify;
+  padding: 0 15px;
 }
 
-/* Responsif untuk layar kecil (mobile) */
 @media (max-width: 767px) {
   .container-deskripsi-lengkap .text-secondary {
-    font-size: 18px;         /* Mengubah ukuran font menjadi lebih kecil di layar mobile */
-    line-height: 1.4;        /* Menyesuaikan jarak antar baris */
-    padding-left: 10px;      /* Padding kiri lebih kecil */
-    padding-right: 10px;     /* Padding kanan lebih kecil */
+    font-size: 18px;
+    line-height: 1.4;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -578,7 +572,7 @@ img {
   <section id="video-profile" class="py-5">
     <div class="container text-center">
       <!-- Judul -->
-      <h2 class="video-title">
+      <h2 class="video-title" style="font-weight: bold">
         Video Profile
       </h2>
       <!-- Video Embed -->
