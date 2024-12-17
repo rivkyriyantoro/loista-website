@@ -48,44 +48,56 @@
         font-weight: 700;
         line-height: 38.4px
     }
+    @media (max-width: 768px) {
+        .carousel .carousel-item img {
+            max-height: 200px; /* Set maximum height for images */
+            object-fit: cover; /* Ensure images cover without distorting */
+        }
+    }
+
+    /* Larger screens adjustments */
+    @media (min-width: 769px) {
+        .carousel .carousel-item img {
+            max-height: 400px; /* Larger height for bigger screens */
+            object-fit: cover;
+        }
+    }
 </style>
 
 <body>
     @include('components.navbar')
 
-    <div class="container mt-7 mb-3">
+    <div class="container mt-4 mb-3">
         <div class="row">
             <div class="col-12">
-                <div id="horizontalCarousel" class="carousel slide mt-8 mb-3" data-bs-ride="carousel">
+                <div id="horizontalCarousel" class="carousel slide mt-4 mb-3" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="{{ asset('images/Frame 761.png') }}" alt="Image 1">
+                            <img src="{{ asset('images/Frame 761.png') }}" class="d-block w-100 img-fluid" alt="Image 1">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/Frame 761.png') }}" alt="Image 2">
+                            <img src="{{ asset('images/Frame 761.png') }}" class="d-block w-100 img-fluid" alt="Image 2">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/Frame 761.png') }}" alt="Image 3">
+                            <img src="{{ asset('images/Frame 761.png') }}" class="d-block w-100 img-fluid" alt="Image 3">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/Frame 761.png') }}" alt="Image 4">
+                            <img src="{{ asset('images/Frame 761.png') }}" class="d-block w-100 img-fluid" alt="Image 4">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/Frame 761.png') }}" alt="Image 5">
+                            <img src="{{ asset('images/Frame 761.png') }}" class="d-block w-100 img-fluid" alt="Image 5">
                         </div>
                         <div class="carousel-item">
-                            <img src="{{ asset('images/Frame 761.png') }}" alt="Image 6">
+                            <img src="{{ asset('images/Frame 761.png') }}" class="d-block w-100 img-fluid" alt="Image 6">
                         </div>
                     </div>
 
                     <!-- Navigation Buttons -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#horizontalCarousel"
-                        data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#horizontalCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#horizontalCarousel"
-                        data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#horizontalCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -94,7 +106,7 @@
         </div>
     </div>
 
-    <div class="container mt-7 mb-3">
+    <div class="container mt-1 mb-3">
         <div class="row">
             <div class="col-12">
                 <div class="image-container">
@@ -109,7 +121,7 @@
         </div>
     </div>
 
-    <div class="container mt-7 mb-3">
+    <div class="container mt-1 mb-3">
         <div class="row">
             <div class="col-12">
                 <h1 class="fw-bold text-responsive">Kegiatan hari ini</h1>

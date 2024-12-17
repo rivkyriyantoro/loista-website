@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+    x<link href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -54,39 +54,47 @@
 
     .pagination button {
         border: none;
-        background: #333;
-        color: white;
+        background: #FFFFFF;
+        color: #333;
         margin: 0 5px;
-        padding: 5px 10px;
+        padding: 10px 20px;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .pagination button:not([disabled]):hover {
+        background-color: #F0F0F0;
+        color: #333;
     }
 
     .pagination button.active {
-        background-color: white;
-        color: black;
-        border: 1px solid #333;
-    }
-
-    .pagination button[disabled] {
-        background: #555;
-        cursor: not-allowed;
+        background-color: #FAFAFA;
+        color: #0B0A0A;
+        border: 1px solid #CFCECE;
+        pointer-events: none;
     }
 
     .bg-custom-gray {
         background-color: #C9C9C9;
     }
 
-    /* Custom Button Radius */
     .btn-custom {
         border-radius: 6px;
+    }
+
+    .mt-7 {
+        margin-top: 8rem;
     }
 </style>
 
 <body>
     @include('components.navbar')
 
-    <div class="container mt-5 mb-3 text-center">
+    <div class="container mt-7 mb-3 text-center">
         <div class="row">
             <div class="col-12">
                 <h1 class="fw-bold text-responsive">Gallery</h1>
@@ -100,9 +108,13 @@
         </div>
         <div class="pagination-container">
             <div class="pagination" id="pagination">
-                <button id="prev" disabled>&lt;</button>
+                <button style="background-color: #333333; color: #FAFAFA;" id="prev" disabled>
+                    <i class="mdi mdi-chevron-left"></i>
+                </button>
                 <!-- Page numbers will be inserted dynamically here -->
-                <button id="next">&gt;</button>
+                <button style="background-color: #333333; color: #FAFAFA;" id="next">
+                    <i class="mdi mdi-chevron-right"></i>
+                </button>
             </div>
         </div>
     </div>

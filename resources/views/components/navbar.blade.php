@@ -230,12 +230,15 @@
 
             <!-- Company Profile -->
             <li class="nav-item"><a class="nav-link @yield('market')" href="{{ route('CompanyProfile') }}">Company Profile</a></li>
-            <li class="nav-item"><a class="nav-link @yield('home')" href="#">Our Projects</a></li>
+            <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('OurProject') }}">Our Projects</a></li>
             <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('Gallery') }}">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link @yield('home')" href="#">Step Order</a></li>
+            <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('StepOrder') }}">Step Order</a></li>
             <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('InfoPromotions') }}">Info & Promotions</a></li>
+            <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('ContactUs') }}">Contact Us</a></li>
             <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('ProductMain') }}">Contact Us</a></li>
-            <li> <a href="#" class="btn-whatsapp mx-auto"><i class="fab fa-whatsapp"></i> Whatsapp Us  </a></li>
+            <li> <a href="#" class="btn-whatsapp mx-auto"><i class="fab fa-whatsapp"></i> Whatsapp Us  </a></li>        
+          </ul>
+
 
         </div>
       </div>
