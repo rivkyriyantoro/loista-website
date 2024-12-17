@@ -139,10 +139,13 @@
         font-size: 14px;
         color: #555;
       }
+      .mt-7 {
+        margin-top: 7rem;
+      }
     </style>
   </head>
   <body>
-    <div class="container mt-5 footer-container">
+    <div class="container mt-7 footer-container">
         <!-- Logo -->
         <div class="footer-logo-wrapper">
           <img

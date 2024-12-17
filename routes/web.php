@@ -65,6 +65,23 @@ Route::get('/gallery/{id}', function ($id) {
     return view('page.GalleryDetail', ['id' => $id]);
 })->name('gallery.detail');
 
+Route::get('/OurProject', function () {
+    return view('page.OurProject'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('OurProject');
+
+Route::get('/OurProjectDetail', function () {
+    return view('page.OurProjectDetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('OurProjectDetail');
+
+Route::get('/ContactUs', function () {
+    return view('page.ContactUs'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('ContactUs');
+
+Route::get('/StepOrder', function () {
+    return view('page.StepOrder'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('StepOrder');
+
+
 // Route::get('/GalleryDetail', function () {
 //     return view('page.GalleryDetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
 // })->name('GalleryDetail');

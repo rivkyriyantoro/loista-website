@@ -59,7 +59,7 @@
       border-radius: 5px;
     }
     .mt-7 {
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 </style>
 

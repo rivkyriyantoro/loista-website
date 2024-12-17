@@ -60,12 +60,15 @@
             line-height: 19.2px;
         }
     }
+    .mt-7 {
+    margin-top: 8rem;
+}
 </style>
 
 <body>
     @include('components.navbar')
 
-    <div class="container mt-5 mb-3 text-center">
+    <div class="container mt-7 mb-3 text-center">
         <div class="row">
             <div class="col-12">
                 <h1 class="fw-bold text-responsive">10 Hilarious Cartoons That Depict Real-Life Problems of Programmers

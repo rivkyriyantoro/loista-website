@@ -973,8 +973,6 @@ img {
   </button>
 </div>
 
-
-
     <!-- Konten Section 1 -->
     <div class="container section-1">
         <div class="row">
