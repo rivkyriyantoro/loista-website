@@ -1,413 +1,518 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ProductPerCatalog</title>
 
-    <!-- Menambahkan Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <style>
+</head>
 
-  /* Mengatur font dan gaya untuk seluruh halaman */
-  body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        .title-section h4 {
-        color: var(--Primary-Primary, #333); /* Menggunakan warna yang sudah ditentukan */
-        font-family: 'jura', sans-serif; /* Menggunakan font Jura */
-        font-size: 64px; /* Ukuran font */
-        font-style: normal; /* Tidak menggunakan italic */
-        font-weight: 600; /* Berat font tebal */
-        line-height: 120%; /* Mengatur tinggi baris agar sesuai dengan desain (76.8px) */
-        margin: 0; /* Menghilangkan margin agar lebih rapi */
-    }
+<style>
 
-        /* Gaya untuk judul */
-        .title-section h1 {
-            color: #333333;
-            font-size: 64px;
-            font-weight: 700;
-            line-height: 76.8px;
-            margin: 0;
-        }
-
-        /* Gaya untuk teks paragraf */
-        .text-box p {
-            color: #383434;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 21.6px;
-            text-align: justify;
-            margin-top: 20px;
-        }
-
-        /* Gaya untuk tombol "Hubungi Kami" */
-        .btn-see-more {
-            display: inline-block;
-            background: #333333;
-            color: #fafafa;
-            font-size: 14px;
-            font-weight: 600;
-            padding: 10px 28px;
-            border-radius: 10px;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        .btn-see-more:hover {
-            background: #ffcc00; /* Ganti dengan warna hover yang sesuai */
-        }
-
-
-        /* Styling untuk Konten Section 1 */
-        .section-1 {
-            margin-top: 3rem;
-            padding: 2rem 0;
-        }
-
-        .section-1 .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .section-1 .col-lg-6 {
-            margin-bottom: 1rem;
-            max-width: 600px;
-        }
-
-        .section-1 .text-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .section-1 .text-box h2 {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .section-1 .text-box p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        .section-1 .col-lg-6 img {
-            width: 407px;
-            height: 172px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        /* Styling untuk Tombol */
-        .section-1 .btn-see-more {
-            width: 224px;
-            height: 37px;
-            margin-top: 1.5rem;
-            padding: 0;
-            font-size: 1rem;
-            background-color: #333333;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .section-1 .btn-see-more:hover {
-            background-color: #333333;
-        }
-
-        /* Styling untuk Konten Section 2 */
-        .section-2 {
-            padding: 3rem 0;
-            /* background-color: #f8f9fa; Warna latar belakang light */
-        }
-
-        .section-2 .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .section-2 .col-lg-6 img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .section-2 .text-box {
-            text-align: left;
-            max-width: 600px;
-        }
-
-        .section-2 .text-box h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-2 .text-box p {
-            font-size: 1.125rem;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-
-        /* Tombol See More pada Section 2 */
-        .section-2 .btn-see-more {
-            background-color: #703c2d;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.125rem;
-            text-align: center;
-        }
-
-        .section-2 .btn-see-more:hover {
-            background-color: #5e2e1e;
-        }
-
-        .section-3 .btn-see-more i {
-
-        }
-        /* Container untuk gambar dan overlay */
-.overlay-container {
-  position: relative;
-  width: 100%;
-  height: 500px; /* Anda bisa sesuaikan tinggi gambar sesuai kebutuhan */
-  overflow: hidden;
-}
-
-/* Gambar yang akan ditampilkan */
-.overlay-image {
+.content-wrapper {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Agar gambar tetap terpotong dengan baik */
-  opacity: 1;
-  transition: opacity 0.3s ease;
+  padding-top: 128px;
+  padding-bottom: 129px;
+  padding-left: 279px;
+  padding-right: 278px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Overlay gelap */
-.overlay-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Gelap 50% */
-  z-index: 1; /* Agar berada di atas gambar */
+/* Gaya untuk teks judul */
+.title-CF {
+  color: #FCFBFA;
+  font-size: 96px;
+  font-family: 'Jura', sans-serif;
+  font-weight: 700;
+  line-height: 115.20px;
+  word-wrap: break-word;
 }
 
-/* Teks di atas gambar */
-.overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding-top: 64px;   /* Mengurangi padding untuk mobile */
+    padding-bottom: 64px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .title {
+    font-size: 48px;  /* Menyesuaikan ukuran font untuk mobile */
+    line-height: 60px; /* Menyesuaikan line-height */
+  }
+}
+
+/* Responsif untuk layar sangat kecil (seperti handphone atau layar portrait sangat sempit) */
+@media (max-width: 576px) {
+  .title {
+    font-size: 36px; /* Menyesuaikan lebih kecil untuk layar sangat sempit */
+    line-height: 45px; /* Menyesuaikan line-height */
+  }
+}
+
+
+/* Styling untuk card produk */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling gambar produk */
+.product-image {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Styling informasi produk */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+}
+
+.product-title {
   text-align: center;
-  z-index: 2; /* Agar teks berada di atas overlay */
+  color: #25211E;
+  font-size: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  line-height: 21.6px;
 }
 
-.overlay-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  font-weight: bold;
+.product-price {
+  text-align: center;
+  color: #454342;
+  font-size: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  line-height: 21.6px;
 }
 
-.overlay-text p {
-  font-size: 1.25rem;
+/* Responsif untuk mobile */
+@media (max-width: 767px) {
+  .product-title {
+    font-size: 16px;
+  }
+  .product-price {
+    font-size: 14px;
+  }
+
+  /* Gambar produk menyesuaikan lebar layar pada mobile */
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
 }
 
- /* Custom Styling untuk grid */
- .grid-item {
-      font-family: 'M PLUS 2 Variable', sans-serif;
-      background-color: lightgray;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
+
+
+
+
+/* styles.css */
+
+/* Gaya untuk judul utama */
+.title {
+  color: #333333;
+  font-size: 56px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  line-height: 67.20px;
+  word-wrap: break-word;
+}
+
+/* Gaya untuk sub-judul */
+.sub-title {
+  text-align: center;
+  color: #707070;
+  font-size: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  line-height: 19.20px;
+  word-wrap: break-word;
+}
+
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;  /* Mengurangi ukuran font untuk layar kecil */
+    line-height: 48px;
+  }
+
+  .sub-title {
+    font-size: 14px; /* Menyesuaikan ukuran font untuk subjudul di layar kecil */
+  }
+}
+
+
+/* Mengimpor font 'Jura' dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+
+
+    .text-responsive {
+        font-family: Jura;
+        font-size: 96px;
+        font-weight: 700;
+        line-height: 115.2px;
     }
 
- .section-2 {
-    display: flex;
-width: 1440px;
-flex-direction: column;
-align-items: center;
-gap: 36px;
-
- }
-
-        /* Responsif untuk Section 2 */
-        @media (max-width: 991px) {
-            .section-2 .row {
-                flex-direction: column;
-                text-align: center;
-            }
+    @media (max-width: 768px) {
+        .text-responsive {
+            font-size: 40px;
+            line-height: 48px;
         }
+    }
 
-         /* Responsive design untuk ukuran layar kecil */
-         @media (max-width: 768px) {
-            .section-1 {
-                padding: 30px 15px;
-            }
+    .custom-gap {
+        --bs-gutter-x: 7px;
+        /* Gap horizontal */
+        --bs-gutter-y: 7px;
+        /* Gap vertikal */
+    }
 
-            .title-section h1 {
-                font-size: 48px;
-                line-height: 58px;
-            }
+    .custom-gap img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
 
-            .text-box p {
-                font-size: 16px;
-                line-height: 19px;
-            }
-        }
-    </style>
-</head>
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pagination button {
+        border: none;
+        background: #333;
+        color: white;
+        margin: 0 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .pagination button.active {
+        background-color: white;
+        color: black;
+        border: 1px solid #333;
+    }
+
+    .pagination button[disabled] {
+        background: #555;
+        cursor: not-allowed;
+    }
+
+    .bg-custom-gray {
+        background-color: #C9C9C9;
+    }
+
+    /* Custom Button Radius */
+    .btn-custom {
+        border-radius: 6px;
+    }
+</style>
+
 <body>
-    <!-- Menyertakan Navbar -->
     @include('components.navbar')
 
+    <div class="container mt-5">
+        <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+          <div class="col-12 text-center">
+            <div class="content-wrapper">
+              <div class="title-CF">
+                Coffee Table
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="container mt-5">
+        <div class="row justify-content-start align-items-end gap-3">
+          <div class="col-12 col-md-auto text-start">
+            <div class="title">Coffee Table Furniture</div>
+          </div>
+          <div class="col-12 col-md-auto text-center">
+            <div class="sub-title">(27 product)</div>
+          </div>
+        </div>
+      </div>
 
-    <div class="container section-1">
-        <div style="width: 100%; height: 100%; padding-top: 128px; padding-bottom: 129px; padding-left: 279px; padding-right: 278px; background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%); justify-content: center; align-items: center; display: inline-flex">
-            <div style="color: #FCFBFA; font-size: 96px; font-family: Jura; font-weight: 700; line-height: 115.20px; word-wrap: break-word">Coffee Table</div>
+      <div class="container mt-5">
+        <div class="row justify-content-between align-items-center">
+          <!-- Produk 1 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Lemari Pakaian" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Lemari Pakaian Corrado High Loista</div>
+                <div class="product-price">IDR 13.500.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 2 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Kursi Makan" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Kursi Makan Trio Loista Indonesia</div>
+                <div class="product-price">IDR 4.750.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 3 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Kursi Ruang Keluarga" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Kursi Ruang Keluarga Zulu Loista</div>
+                <div class="product-price">IDR 4.000.000</div>
+              </div>
+            </div>
+          </div>
         </div>
 
+        <div class="row justify-content-between align-items-center">
+          <!-- Produk 4 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Meja Tamu" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Meja Tamu Marlo</div>
+                <div class="product-price">IDR 2.200.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 5 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Kursi Santai" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Kursi Santai Loista</div>
+                <div class="product-price">IDR 2.800.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 6 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Lampu Hias" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Lampu Hias Vintage</div>
+                <div class="product-price">IDR 1.200.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-between align-items-center">
+          <!-- Produk 7 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Meja Kerja" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Meja Kerja Minimalis</div>
+                <div class="product-price">IDR 3.000.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 8 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Rak Buku" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Rak Buku Kayu</div>
+                <div class="product-price">IDR 1.500.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 9 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="TV Stand" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">TV Stand Urban Style</div>
+                <div class="product-price">IDR 2.700.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-between align-items-center">
+          <!-- Produk 10 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Bantal Sofa" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Bantal Sofa Empuk</div>
+                <div class="product-price">IDR 500.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 11 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Meja Belajar" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Meja Belajar Kayu</div>
+                <div class="product-price">IDR 1.800.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Produk 12 -->
+          <div class="col-12 col-md-4 text-center mb-4">
+            <div class="product-card">
+              <img src="https://via.placeholder.com/350x350" alt="Lemari Rak Sepatu" class="img-fluid" />
+              <div class="product-info">
+                <div class="product-title">Lemari Rak Sepatu Modern</div>
+                <div class="product-price">IDR 2.500.000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="pagination-container">
+            <div class="pagination" id="pagination">
+                <button id="prev" disabled>&lt;</button>
+                <!-- Page numbers will be inserted dynamically here -->
+                <button id="next">&gt;</button>
+            </div>
+        </div>
     </div>
 
-    <div class="container section-2">
-        <div style="width: 100%; height: 100%; justify-content: flex-start; align-items: flex-end; gap: 18px; display: inline-flex">
-            <div style="color: #333333; font-size: 56px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 67.20px; word-wrap: break-word">Coffee Table Furniture</div>
-            <div style="text-align: center; color: #707070; font-size: 16px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 19.20px; word-wrap: break-word">(27 product)</div>
-        </div>
-    </div>
-
-    <div class="container section-3">
-        <div style="width: 100%; height: 100%; justify-content: space-between; align-items: center; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Lemari Pakaian Corrado High Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  13.500.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Makan Trio Loista Indonesia</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  4.750.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Ruang Keluarga Zulu Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR 4,000,000</div>
-                </div>
-            </div>
-        </div>
-        <div style="width: 100%; height: 100%; justify-content: space-between; align-items: center; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Lemari Pakaian Corrado High Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  13.500.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Makan Trio Loista Indonesia</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  4.750.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Ruang Keluarga Zulu Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR 4,000,000</div>
-                </div>
-            </div>
-        </div>
-        <div style="width: 100%; height: 100%; justify-content: space-between; align-items: center; display: inline-flex">
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Lemari Pakaian Corrado High Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  13.500.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Makan Trio Loista Indonesia</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR  4.750.000</div>
-                </div>
-            </div>
-            <div style="flex-direction: column; justify-content: flex-start; align-items: center; gap: 20px; display: inline-flex">
-                <img style="width: 350px; height: 350px" src="https://via.placeholder.com/350x350" />
-                <div style="align-self: stretch; height: 80px; flex-direction: column; justify-content: space-between; align-items: center; display: flex">
-                    <div style="align-self: stretch; text-align: center; color: #25211E; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 700; line-height: 21.60px; word-wrap: break-word">Kursi Ruang Keluarga Zulu Loista</div>
-                    <div style="align-self: stretch; text-align: center; color: #454342; font-size: 18px; font-family: Plus Jakarta Sans; font-weight: 400; line-height: 21.60px; word-wrap: break-word">IDR 4,000,000</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container section-3" style="padding-top: 108px; padding-bottom: 330px;">
-        <div style="width: 100%; height: 100%; justify-content: center; align-items: flex-start; gap: 18px; display: inline-flex">
-            <div style="width: 40px; height: 40px; padding: 6px; background: #333333; border-radius: 4px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="width: 17px; height: 17px; position: relative">
-                    <div style="width: 4.66px; height: 7.92px; left: 5.96px; top: 4.55px; position: absolute; background: #FAFAFA"></div>
-                </div>
-            </div>
-            <div style="width: 40px; height: 40px; padding: 6px; background: #FAFAFA; border-radius: 4px; border: 1px #CFCECE solid; justify-content: center; align-items: center; display: inline-flex">
-                <div style="color: #0B0A0A; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 16.80px; word-wrap: break-word">1</div>
-            </div>
-            <div style="width: 40px; height: 40px; padding: 6px; border-radius: 4px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="color: #0B0A0A; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 16.80px; word-wrap: break-word">2</div>
-            </div>
-            <div style="width: 40px; height: 40px; padding: 6px; border-radius: 4px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="color: #0B0A0A; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 16.80px; word-wrap: break-word">3</div>
-            </div>
-            <div style="width: 40px; height: 40px; padding: 6px; border-radius: 4px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="color: #0B0A0A; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 16.80px; word-wrap: break-word">4</div>
-            </div>
-            <div style="width: 40px; height: 40px; padding: 6px; border-radius: 4px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="color: #0B0A0A; font-size: 14px; font-family: Plus Jakarta Sans; font-weight: 600; line-height: 16.80px; word-wrap: break-word">5</div>
-            </div>
-            <div style="width: 40px; height: 40px; padding: 6px; background: #333333; border-radius: 4px; justify-content: center; align-items: center; display: inline-flex">
-                <div style="width: 17px; height: 17px; position: relative">
-                    <div style="width: 4.66px; height: 7.92px; left: 6.37px; top: 4.55px; position: absolute; background: #FAFAFA"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
 
+    <script>
+        const images = [
+            'images/Frame 761.png', 'images/Frame 761.png', 'images/Frame 761.png',
+            'images/Frame 761.png', 'images/Frame 761.png', 'images/Frame 761.png',
+            'images/Frame 761.png', 'images/Frame 761.png', 'images/Frame 761.png'
+        ];
 
-  <!-- Menyertakan Navbar -->
-  @include('components.footer')
+        const itemsPerPage = 6; // 6 gambar per halaman
+        let currentPage = 1;
+        const totalPages = Math.ceil(images.length / itemsPerPage);
+
+        // Tampilkan gambar sesuai halaman
+        function displayImages(page) {
+            const galleryContainer = document.getElementById('gallery-container');
+            galleryContainer.innerHTML = '';
+
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+
+            const paginatedImages = images.slice(start, end);
+
+            paginatedImages.forEach((image, index) => {
+                const col = document.createElement('div');
+                col.className = 'col-6 col-lg-4'; // 2 kolom di mobile, 3 kolom di laptop
+                col.innerHTML = `
+                <img src="${image}" alt="Image" class="img-fluid" style="cursor: pointer;">`;
+
+                // Tambahkan event listener untuk berpindah ke halaman detail
+                col.querySelector('img').addEventListener('click', () => {
+                    const imageId = start + index + 1; // ID gambar
+                    window.location.href = `/gallery/${imageId}`; // Arahkan ke route Laravel
+                });
+
+                galleryContainer.appendChild(col);
+            });
+        }
+
+        // Konfigurasi pagination
+        function setupPagination() {
+            const paginationContainer = document.getElementById('pagination');
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+
+            // Hapus nomor halaman lama
+            const existingButtons = document.querySelectorAll('.pagination .page-number');
+            existingButtons.forEach(button => button.remove());
+
+            // Tambahkan nomor halaman
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement('button');
+                button.className = `page-number ${i === currentPage ? 'active' : ''}`;
+                button.textContent = i;
+                button.addEventListener('click', () => {
+                    currentPage = i;
+                    updatePagination();
+                });
+                nextButton.before(button);
+            }
+
+            // Update tombol prev dan next
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+
+            prevButton.onclick = () => {
+                if (currentPage > 1) currentPage--;
+                updatePagination();
+            };
+
+            nextButton.onclick = () => {
+                if (currentPage < totalPages) currentPage++;
+                updatePagination();
+            };
+        }
+
+        // Update tampilan
+        function updatePagination() {
+            displayImages(currentPage);
+            setupPagination();
+        }
+
+        // Inisialisasi pertama kali
+        updatePagination();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    @include('components.footer')
 </body>
+
 </html>
