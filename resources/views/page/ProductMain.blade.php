@@ -15,10 +15,10 @@
 
     <style>
 
-/* Custom Styling for Section */
+
 <style>
 
-     /* Custom Styling for Header proma */
+
 
      .container{
          max-width: 100%;
@@ -54,7 +54,7 @@
       word-wrap: break-word;
     }
 
-    /* Mobile Responsive Styles */
+
     @media (max-width: 768px) {
       .header-proma .title-proma {
         max-width: 100%;
@@ -66,7 +66,7 @@
         font-size: 16px;
       }
 
-      /* For mobile, reduce padding */
+
       .header-proma {
         padding-left: 15px;
         padding-right: 15px;
@@ -75,25 +75,25 @@
 
     .btn-hubungi {
     display: flex;
-    justify-content: center;    /* Centers the content horizontally */
-    align-items: center;        /* Centers the content vertically */
-    margin: 0 auto;             /* Centers the button itself */
-    text-align: center;         /* Ensures the text inside the button is centered */
-    background-color: #333333;        /* Warna latar belakang tombol */
-    color: white;                     /* Warna teks tombol */
-    font-size: 14px;                  /* Ukuran font */
-    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
-    border-radius: 10px;              /* Membuat sudut tombol melengkung */
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
-    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
-    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
-    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 224px;
+    height: 37px;
+    margin: 0 auto;
     font-weight: 600;
 }
 
 @media (max-width: 768px) {
     .btn-hubungi {
-        justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+        justify-content: center;
         align-items: center;
     }
 }
@@ -101,60 +101,102 @@
 
 .btn-other {
     display: flex;
-    justify-content: center;    /* Centers the content horizontally */
-    align-items: center;        /* Centers the content vertically */
-    margin: 0 auto;             /* Centers the button itself */
-    text-align: center;         /* Ensures the text inside the button is centered */
-    background-color: #333333;        /* Warna latar belakang tombol */
-    color: white;                     /* Warna teks tombol */
-    font-size: 14px;                  /* Ukuran font */
-    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
-    border-radius: 10px;              /* Membuat sudut tombol melengkung */
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
-    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
-    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
-    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    width: 224px;
+    height: 37px;
+    margin: 0 auto;
     font-weight: 600;
 }
 
 @media (max-width: 768px) {
     .btn-other {
-        justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+        justify-content: center;
         align-items: center;
     }
 }
 
 .carousel-inner .carousel-item img {
-    width: 100%; /* Lebar penuh */
-    height: 456px; /* Tinggi khusus desktop */
-    object-fit: cover; /* Menyesuaikan gambar */
+    width: 100%;
+    height: 456px;
+    object-fit: cover;
 }
 
+/* Gaya default */
+.responsive-icon {
+    color: rgb(255, 255, 255);
+    font-size: 3rem; /* Default size */
+}
+
+/* Responsif untuk perangkat mobile (max-width: 576px) */
+@media (max-width: 767px) {
+    .responsive-icon {
+        font-size: 1.5rem; /* Ukuran lebih kecil untuk perangkat mobile */
+        color: rgb(255, 255, 255); /* Opsional: ubah warna untuk mobile */
+    }
+}
+
+/* Responsif untuk perangkat tablet (max-width: 768px) */
 @media (max-width: 768px) {
-    .carousel-control-prev, .carousel-control-next {
-        font-size: 1.5rem; /* Menyesuaikan ukuran ikon untuk perangkat mobile */
+    .responsive-icon {
+        font-size: 1.5rem; /* Sedikit lebih besar dari mobile */
     }
 }
 
 
 
-/* Styling for the overlay container */
+@media (max-width: 768px) {
+    .carousel-control-prev, .carousel-control-next {
+        font-size: 0.75rem;
+    }
+    .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+}
+
+
+@media (max-width: 767px) {
+    .carousel-control-prev, .carousel-control-next {
+        font-size: 0.75rem;
+    }
+
+    .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 124px;
+    object-fit: cover;
+}
+
+}
+
+
+
+
 .overlay-container {
     position: relative;
     width: 100%;
-    height: 372px; /* Set height for images */
+    height: 372px;
     overflow: hidden;
-    border-radius: 10px; /* Optional: rounded corners for images */
 }
 
-/* Image styling */
+
 .overlay-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the container */
+    object-fit: cover;
 }
 
-/* Text overlay styling */
+
 .overlay-text {
     position: absolute;
     bottom: 20px;
@@ -165,23 +207,23 @@
     z-index: 2;
 }
 
-/* Responsive styles for smaller devices */
+
 @media (max-width: 768px) {
     .overlay-container {
-        height: 250px; /* Adjust height for smaller screens */
+        height: 250px;
     }
 
     .overlay-text {
-        font-size: 24px; /* Make text smaller on smaller devices */
+        font-size: 24px;
     }
 }
 
 
-  /* Styling untuk Konten Section 2 */
 
 
 
-  .Retails .col-lg-6 img {
+
+  .Proma .col-lg-6 img {
             width: 100%;
             height: auto;
             object-fit: cover;
@@ -190,24 +232,24 @@
 
 
 
-        /* Container untuk gambar dan overlay */
+
 .overlay-container {
   position: relative;
   width: 100%;
-  height: 372px; /* Anda bisa sesuaikan tinggi gambar sesuai kebutuhan */
+  height: 372px;
   overflow: hidden;
 }
 
-/* Gambar yang akan ditampilkan */
+
 .overlay-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Agar gambar tetap terpotong dengan baik */
+  object-fit: cover;
   opacity: 1;
   transition: opacity 0.3s ease;
 }
 
-/* Overlay gelap */
+
 .overlay-container::after {
   content: '';
   position: absolute;
@@ -215,11 +257,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Gelap 50% */
-  z-index: 1; /* Agar berada di atas gambar */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-/* Teks di atas gambar */
+
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -227,7 +269,7 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  z-index: 2; /* Agar teks berada di atas overlay */
+  z-index: 2;
 }
 
 .overlay-text h2 {
@@ -235,11 +277,9 @@
   margin-bottom: 10px;
   font-weight: bold;
 }
-/*
 
- /* Custom Styling untuk grid */
 
- .Retails {
+ .Proma {
     display: flex;
 max-width: 1440px;
 flex-direction: column;
@@ -248,36 +288,56 @@ gap: 36px;
 
  }
 
-/* styel section 3*/
+
 .overlay-text1 h2 {
     position: absolute;
     bottom: 20px;
     left: 20px;
     color: white;
     font-size: 40px;
-    font-weight:bold; /* Menebalkan font */
+    font-weight:bold;
     z-index: 2;
     text-align: left;
     width: 90%;
     word-wrap: break-word;
 }
 
-/* Responsive untuk perangkat mobile */
 @media screen and (max-width: 768px) {
-    /* Ubah ukuran gambar */
+
     .overlay-container {
-        height: 118px; /* Ukuran gambar lebih kecil pada mobile */
+        height: 200px;
     }
 
     .overlay-image {
         width: 1164px;
-        height: auto; /* Menyesuaikan ukuran gambar */
+        height: auto;
         object-fit: cover;
     }
 
-    /* Ubah font-size teks */
+
     .overlay-text1 h2  {
-        font-size: 10px; /* Mengurangi ukuran font pada perangkat mobile */
+        font-size: 10px;
+        bottom: 10px;
+        left: 10px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+
+    .overlay-container {
+        height: 118px;
+    }
+
+    .overlay-image {
+        width: 1164px;
+        height: auto;
+        object-fit: cover;
+    }
+
+
+    .overlay-text1 h2  {
+        font-size: 10px;
         bottom: 10px;
         left: 10px;
     }
@@ -292,27 +352,27 @@ gap: 36px;
 
 .overlay-container {
   position: relative;
-  width: 100%; /* Pastikan lebar kontainer 100% */
-  max-width: 100%; /* Mencegah elemen melebihi lebar layar */
-  /* margin-bottom: 20px; Spasi antar elemen */
+  width: 100%;
+  max-width: 100%;
+
 }
 
 .overlay-image {
   width: 100%;
   height: auto;
-  object-fit: cover; /* Menghindari gambar terdistorsi */
+  object-fit: cover;
 }
 
-/* Styling untuk Konten text2 */
+
 .responsive-breadcrumb {
 color: #707070;
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
   word-wrap: break-word;
   width: 100%;
-  padding-bottom: 45px; /* Padding bawah */
+  padding-bottom: 45px;
   display: flex;
-  justify-content: left; /* Menyusun teks di tengah */
+  justify-content: left;
   align-items: left;
 }
 
@@ -325,13 +385,13 @@ color: #707070;
   font-family: 'Jura', sans-serif;
   font-weight: 700;
   text-align: left;
-  font-size: 64px; /* Ukuran default untuk desktop */
+  font-size: 64px;
 }
 
 .responsive-text-h3 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: normal;
-  font-size: 14px; /* Ukuran font default */
+  font-size: 14px;
   color: #707070;
   text-align: center;
   line-height: 1.2;
@@ -358,9 +418,9 @@ color: #707070;
     }
 
     .responsive-text {
-        font-size: 28px; /* Ukuran font lebih kecil di mobile */
+        font-size: 28px;
         line-height: 1.4;
-        text-align: center; /* Menyusun teks di tengah */
+        text-align: center;
     }
 
 
@@ -379,7 +439,7 @@ color: #707070;
     .responsive-text-h3 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: normal;
-    font-size: 12px; /* Ukuran font default */
+    font-size: 12px;
     color: #707070;
     text-align: center;
     line-height: 1.2;
@@ -392,13 +452,18 @@ color: #707070;
         left: 20px;
         color: white;
         font-size: 20px;
-        font-weight:bold; /* Menebalkan font */
+        font-weight:bold;
         z-index: 2;
         text-align: left;
         width: 90%;
         word-wrap: break-word;
     }
 
+    }
+
+    .px-5 {
+        padding-left: ($spacer * .5) !important;
+        padding-right: ($spacer * .5) !important;
     }
 
 
@@ -409,9 +474,9 @@ color: #707070;
 <body>
 
     <!-- Menyertakan Navbar -->
-    @include('components.navbar')
+    {{-- @include('components.navbar') --}}
 
- 
+
 
         <div class="container">
         <!-- Header Proma Section -->
@@ -460,12 +525,12 @@ color: #707070;
 
             <!-- Left and right controls/icons -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductmain" data-bs-slide="prev">
-              <i class="fas fa-chevron-circle-left" style="color:rgb(255, 255, 255); font-size: 2rem;"></i>
-              <span class="visually-hidden">Previous</span>
+                <i class="fas fa-chevron-circle-left responsive-icon"></i>
+                <span class="visually-hidden">Previous</span>
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselProductmain" data-bs-slide="next">
-              <i class="fas fa-chevron-circle-right" style="color:rgb(255, 255, 255); font-size: 2rem;"></i>
-              <span class="visually-hidden">Next</span>
+                <i class="fas fa-chevron-circle-right responsive-icon"></i>
+                <span class="visually-hidden">Next</span>
             </button>
         </div>
 
@@ -473,11 +538,8 @@ color: #707070;
 
 
              <!-- section 3 -->
-    <div class="container Retails mt-5 ">
+    <div class="container Proma mt-5" style="widhth: 372px;">
         <div class="row text-start">
-          <!-- Title aligned to the left -->
-          <div class="responsive-container">
-          </div>
         </div>
 
                 <!-- Wardrobe -->
@@ -533,11 +595,11 @@ color: #707070;
 
 
                <!-- section 3 -->
-    <div class="container Retails mt-5 ">
+    <div class="container Proma mt-5 ">
         <div class="row text-start">
           <!-- Title aligned to the left -->
           <div class="responsive-container">
-            <p class="responsive-text-h1">Retails</p>
+            <p class="responsive-text-h1">Proma</p>
           </div>
         </div>
 

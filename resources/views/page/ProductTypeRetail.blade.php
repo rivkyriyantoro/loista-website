@@ -17,9 +17,10 @@
         .overlay-container {
             position: relative;
             width: 100%;
-            height: 372px;
+            height: 23.25rem;
             margin-bottom: 20px;
             overflow: hidden;
+
 
         }
 
@@ -29,6 +30,7 @@
             object-fit: cover;  /* Menyesuaikan gambar dengan baik */
             opacity: 1;
             transition: opacity 0.3s ease;
+
         }
 
         /* Overlay gelap */
@@ -62,7 +64,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            padding-bottom: 20px;
+            padding-bottom: 40px;
             justify-content: center;  /* Menyusun gambar di tengah */
         }
 
@@ -106,7 +108,7 @@
         font-size: 37px
     }
     .overlay-container {
-        height: 200px;  /* 40% dari 372px untuk mobile */
+        height: 12.5rem;
     }
 }
 
@@ -115,6 +117,7 @@
 @media (max-width: 767px) {
     .overlay-text1 h2 {
         font-size: 18px;
+        height: 0.5rem;
     }
 
     .responsive-breadcrumb {
@@ -122,12 +125,15 @@
         padding-bottom: 10px
     }
     .responsive-text-h1{
+
         font-size: 28px
     }
     .overlay-container {
-        height: 118px;  /* 40% dari 372px untuk mobile */
+    height: 7.375rem;
     }
 }
+
+
 
 
 
@@ -156,48 +162,52 @@
             </div>
 
             <!-- Title aligned to the left -->
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-12">
                 <div class="responsive-container">
                     <p class="responsive-text-h1">Retails</p>
                 </div>
             </div>
         </div>
 
-        <!-- Grid for overlay images dalam urutan baris dengan flexbox -->
-        <div class="Retail">
-            <!-- Wardrobe -->
-            <div class="overlay-container">
-                <img class="overlay-image" src="https://images.unsplash.com/photo-1683181181300-44c0c991a2cf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wardrobe">
-                <div class="fw-bold overlay-text1">
-                    <h2>Sofa</h2>
-                </div>
-            </div>
 
-            <!-- TV Cabinet -->
-            <div class="overlay-container">
-                <img class="overlay-image" src="https://images.unsplash.com/photo-1678874956092-6d9dc8b766bf?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="TV Cabinet">
-                <div class=" fw-bold overlay-text1">
-                    <h2>Bench</h2>
+        <div class="col-12">
+                <div class="overlay-container">
+                    <img class="overlay-image" src="https://images.unsplash.com/photo-1683181181300-44c0c991a2cf?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wardrobe">
+                    <div class="fw-bold overlay-text1">
+                        <h2>Sofa</h2>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Backdrop -->
-            <div class="overlay-container">
-                <img class="overlay-image" src="https://images.unsplash.com/photo-1578112010316-b44c50d27b2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Backdrop">
-                <div class="fw-bold overlay-text1">
-                    <h2>Coffee Table</h2>
+                <!-- TV Cabinet -->
+                <div class="overlay-container">
+                    <img class="overlay-image" src="https://images.unsplash.com/photo-1678874956092-6d9dc8b766bf?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="TV Cabinet">
+                    <div class=" fw-bold overlay-text1">
+                        <h2>Bench</h2>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Other -->
-            <div class="overlay-container">
-                <img class="overlay-image" src="https://images.unsplash.com/photo-1578112010316-b44c50d27b2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Other">
-                <div class="overlay-text1">
-                    <h2>Side Table</h2>
+                <!-- Backdrop -->
+                <div class="overlay-container">
+                    <img class="overlay-image" src="https://images.unsplash.com/photo-1578112010316-b44c50d27b2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Backdrop">
+                    <div class="fw-bold overlay-text1">
+                        <h2>Coffee Table</h2>
+                    </div>
+                </div>
+
+                <!-- Other -->
+                <div class="overlay-container">
+                    <img class="overlay-image" src="https://images.unsplash.com/photo-1578112010316-b44c50d27b2b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Other">
+                    <div class="overlay-text1">
+                        <h2>Side Table</h2>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- Menyertakan Footer -->
     @include('components.footer')
