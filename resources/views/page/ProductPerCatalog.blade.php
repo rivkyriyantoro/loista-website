@@ -19,255 +19,94 @@
 
 <style>
 
-.content-wrapper {
-  background-size: cover;
-  background-position: center; /* Memusatkan gambar */
-  background-repeat: no-repeat; /* Menghindari pengulangan gambar */
-  height: 300px; /* Tinggi elemen */
-  width: 100%; /* Lebar elemen */
-  display: flex; /* Menggunakan Flexbox untuk konten */
-  justify-content: center; /* Pusatkan secara horizontal */
-  align-items: center; /* Pusatkan secara vertikal */
-}
-
-
-/* Gaya untuk teks judul */
-.title-CF {
-  color: #FCFBFA;
-  font-size: 96px;
-  font-family: 'Jura', sans-serif;
-  font-weight: 700;
-  line-height: 115.20px;
-  word-wrap: break-word;
-}
-
-/* Responsif untuk layar kecil (mobile) */
-@media (max-width: 768px) {
-  .content-wrapper {
-    padding-top: 64px;   /* Mengurangi padding untuk mobile */
-    padding-bottom: 64px;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .title {
-    font-size: 48px;  /* Menyesuaikan ukuran font untuk mobile */
-    line-height: 60px; /* Menyesuaikan line-height */
-  }
-}
-
-/* Responsif untuk layar sangat kecil (seperti handphone atau layar portrait sangat sempit) */
-@media (max-width: 576px) {
-  .title {
-    font-size: 36px; /* Menyesuaikan lebih kecil untuk layar sangat sempit */
-    line-height: 45px; /* Menyesuaikan line-height */
-  }
-}
-
-@media (max-width: 576px) {
-  .title {
-    font-size: 20px; /* Ukuran font untuk perangkat sangat kecil */
-  }
-
-  .sub-title {
-    font-size: 16px; /* Subtitle lebih kecil di layar kecil */
-  }
-}
-
-
-
-/* Styling untuk card produk */
-.product-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Styling gambar produk */
-.product-image {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/* Styling informasi produk */
-.product-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 80px;
-  width: 100%;
-}
-
-.product-title {
-  text-align: center;
-  color: #25211E;
-  font-size: 18px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  line-height: 21.6px;
-}
-
-.product-price {
-  text-align: center;
-  color: #454342;
-  font-size: 18px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 400;
-  line-height: 21.6px;
-}
-
-/* Responsif untuk mobile */
-@media (max-width: 767px) {
-    .product-container .product-card {
-        width: 48%;
-}
-  .product-title {
-    font-size: 16px;
-  }
-  .product-price {
-    font-size: 14px;
-  }
-
-  .product-image {
-    width: 100%;
-    height: auto;
-  }
-}
-
-
-
-/* Gaya untuk judul utama */
-.title {
-  color: #333333;
-  font-size: 56px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  line-height: 67.20px;
-  word-wrap: break-word;
-}
-
-/* Gaya untuk sub-judul */
-.sub-title {
-  text-align: center;
-  color: #707070;
-  font-size: 16px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 400;
-  line-height: 19.20px;
-  word-wrap: break-word;
-}
-
-/* Responsif untuk layar kecil (mobile) */
-@media (max-width: 768px) {
-  .title {
-    font-size: 40px;  /* Mengurangi ukuran font untuk layar kecil */
-    line-height: 48px;
-  }
-
-  .sub-title {
-    font-size: 14px; /* Menyesuaikan ukuran font untuk subjudul di layar kecil */
-  }
-}
-
-
-/* Mengimpor font 'Jura' dari Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
-
-
-    .text-responsive {
-        font-family: Jura;
-        font-size: 96px;
-        font-weight: 700;
-        line-height: 115.2px;
-    }
-
-    @media (max-width: 768px) {
-        .text-responsive {
-            font-size: 40px;
-            line-height: 48px;
+.product-profile-header {
+            position: relative;
+            width: 100%;
+            height: 372px;
+            margin-top: 52px;
+            background-image: url('https://images.unsplash.com/photo-1578112010316-b44c50d27b2b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    }
 
-    .custom-gap {
-        --bs-gutter-x: 7px;
-        /* Gap horizontal */
-        --bs-gutter-y: 7px;
-        /* Gap vertikal */
-    }
 
-    .custom-gap img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+        .product-profile-header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
 
-    .pagination-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
 
-    .pagination button {
-        border: none;
-        background: #333;
-        color: white;
-        margin: 0 5px;
-        padding: 5px 10px;
-        cursor: pointer;
-        border-radius: 4px;
-    }
+        .product-profile-header .product-profile-title {
+            position: relative;
+            color: #FAFAFA;
+            font-size: 56px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            z-index: 2;
+        }
 
-    .pagination button.active {
-        background-color: white;
-        color: black;
-        border: 1px solid #333;
-    }
 
-    .pagination button[disabled] {
-        background: #555;
-        cursor: not-allowed;
-    }
+        @media (max-width: 992px) {
+            .product-profile-header {
+                height: 200px;
+                padding-left: 138px;
+                padding-right: 138px;
+                padding-top: 52px;
+            }
 
-    .bg-custom-gray {
-        background-color: #C9C9C9;
-    }
+            .product-profile-header .product-profile-title {
+                font-size: 36px;
 
-    /* Custom Button Radius */
-    .btn-custom {
-        border-radius: 6px;
-    }
+
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-profile-header {
+                height: auto;
+                padding: 52px 138px;
+            }
+
+            .product-profile-header .product-profile-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product-profile-header {
+                padding: 52px 20px;
+            }
+
+            .product-profile-header .product-profile-title {
+                font-size: 20px;
+            }
+        }
+
+
+
+
+
 </style>
 
 <body>
-    @include('components.navbar')
+    {{-- @include('components.navbar') --}}
 
-    <div class="container headercat">
-        <div class="row justify-content-center align-items-center ">
-          <div class="col-12 text-center">
-            <div class="content-wrapper">
-                <img alt="Meja Ruang Keluarga Zupa Loista" class="product-image" src="https://storage.googleapis.com/a1aa/image/kGaqdsvPbTobENUUJLYxaMtc6awm9YtRfLFJJuWB30a6vO7JA.jpg"/>
 
-              <div class="title-CF">
-                Coffee Table
-              </div>
-            </div>
-          </div>
+    <div class="container product-profile-header d-flex justify-content-center align-items-center pt-11">
+        <div class="overlay"></div>
+        <div class="product-profile-title">
+            Coffee Table
         </div>
-      </div>
-
+    </div>
 
 
       <div class="container" style="margin-top: 84px;">
@@ -285,248 +124,90 @@
       </div>
 
 
-
-
       <div class="container mt-5">
-        <div class="row justify-content-between align-items-center">
-          <!-- Produk 1 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card" style="max-width: 450px;">
-              <img src="https://images.unsplash.com/photo-1672096107096-8319c81b099a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D" alt="Lemari Pakaian" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Lemari Pakaian Corrado High Loista</div>
-                <div class="product-price">IDR 13.500.000</div>
-              </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-6 mb-3">
+                <div class="card border-0 shadow-none">
+                    <img src="\img\Rectangle 125.png" class="card-img-top border-0 shadow-none border-0 shadow-none" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemari Pakaian Corrado High Loista</h5>
+                        <p class="card-text">IDR 13.500.000</p>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <!-- Produk 2 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Kursi Makan" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Kursi Makan Trio Loista Indonesia</div>
-                <div class="product-price">IDR 4.750.000</div>
-              </div>
+            <div class="col-lg-4 col-md-6 col-6 mb-3">
+                <div class="card border-0 shadow-none">
+                    <img src="\img\Rectangle 125.png" class="card-img-top border-0 shadow-none" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemari Pakaian Corrado High Loista</h5>
+                        <p class="card-text">IDR 13.500.000</p>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <!-- Produk 3 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Kursi Ruang Keluarga" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Kursi Ruang Keluarga Zulu Loista</div>
-                <div class="product-price">IDR 4.000.000</div>
-              </div>
+            <div class="col-lg-4 col-md-6 col-6 mb-3">
+                <div class="card border-0 shadow-none">
+                    <img src="\img\Rectangle 125.png" class="card-img-top border-0 shadow-none" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemari Pakaian Corrado High Loista</h5>
+                        <p class="card-text">IDR 13.500.000</p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-4 col-md-6 col-6 mb-3">
+                <div class="card border-0 shadow-none">
+                    <img src="\img\Rectangle 125.png" class="card-img-top border-0 shadow-none" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemari Pakaian Corrado High Loista</h5>
+                        <p class="card-text">IDR 13.500.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6 mb-3" >
+                <div class="card border-0 shadow-none">
+                    <img src="\img\Rectangle 125.png" class="card-img-top border-0 shadow-none" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemari Pakaian Corrado High Loista</h5>
+                        <p class="card-text">IDR 13.500.000</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-6 mb-3">
+                <div class="card border-0 shadow-none">
+                    <img src="\img\Rectangle 125.png" class="card-img-top border-0 shadow-none" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lemari Pakaian Corrado High Loista</h5>
+                        <p class="card-text">IDR 13.500.000</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row justify-content-between align-items-center">
-          <!-- Produk 4 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Meja Tamu" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Meja Tamu Marlo</div>
-                <div class="product-price">IDR 2.200.000</div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Produk 5 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Kursi Santai" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Kursi Santai Loista</div>
-                <div class="product-price">IDR 2.800.000</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Produk 6 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Lampu Hias" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Lampu Hias Vintage</div>
-                <div class="product-price">IDR 1.200.000</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-between align-items-center">
-          <!-- Produk 7 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Meja Kerja" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Meja Kerja Minimalis</div>
-                <div class="product-price">IDR 3.000.000</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Produk 8 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Rak Buku" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Rak Buku Kayu</div>
-                <div class="product-price">IDR 1.500.000</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Produk 9 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="TV Stand" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">TV Stand Urban Style</div>
-                <div class="product-price">IDR 2.700.000</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row justify-content-between align-items-center">
-          <!-- Produk 10 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Bantal Sofa" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Bantal Sofa Empuk</div>
-                <div class="product-price">IDR 500.000</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Produk 11 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Meja Belajar" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Meja Belajar Kayu</div>
-                <div class="product-price">IDR 1.800.000</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Produk 12 -->
-          <div class="col-12 col-md-4 text-center mb-4">
-            <div class="product-card">
-              <img src="https://via.placeholder.com/350x350" alt="Lemari Rak Sepatu" class="img-fluid" />
-              <div class="product-info">
-                <div class="product-title">Lemari Rak Sepatu Modern</div>
-                <div class="product-price">IDR 2.500.000</div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
 
 
-        <div class="pagination-container">
-            <div class="pagination" id="pagination">
-                <button id="prev" disabled>&lt;</button>
-                <!-- Page numbers will be inserted dynamically here -->
-                <button id="next">&gt;</button>
-            </div>
-        </div>
-    </div>
+<div class="container mt-5">
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
 
 
-
-
-
-    <script>
-        const images = [
-            'images/Frame 761.png', 'images/Frame 761.png', 'images/Frame 761.png',
-            'images/Frame 761.png', 'images/Frame 761.png', 'images/Frame 761.png',
-            'images/Frame 761.png', 'images/Frame 761.png', 'images/Frame 761.png'
-        ];
-
-        const itemsPerPage = 6; // 6 gambar per halaman
-        let currentPage = 1;
-        const totalPages = Math.ceil(images.length / itemsPerPage);
-
-        // Tampilkan gambar sesuai halaman
-        function displayImages(page) {
-            const galleryContainer = document.getElementById('gallery-container');
-            galleryContainer.innerHTML = '';
-
-            const start = (page - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-
-            const paginatedImages = images.slice(start, end);
-
-            paginatedImages.forEach((image, index) => {
-                const col = document.createElement('div');
-                col.className = 'col-6 col-lg-4'; // 2 kolom di mobile, 3 kolom di laptop
-                col.innerHTML = `
-                <img src="${image}" alt="Image" class="img-fluid" style="cursor: pointer;">`;
-
-                // Tambahkan event listener untuk berpindah ke halaman detail
-                col.querySelector('img').addEventListener('click', () => {
-                    const imageId = start + index + 1; // ID gambar
-                    window.location.href = `/gallery/${imageId}`; // Arahkan ke route Laravel
-                });
-
-                galleryContainer.appendChild(col);
-            });
-        }
-
-        // Konfigurasi pagination
-        function setupPagination() {
-            const paginationContainer = document.getElementById('pagination');
-            const prevButton = document.getElementById('prev');
-            const nextButton = document.getElementById('next');
-
-            // Hapus nomor halaman lama
-            const existingButtons = document.querySelectorAll('.pagination .page-number');
-            existingButtons.forEach(button => button.remove());
-
-            // Tambahkan nomor halaman
-            for (let i = 1; i <= totalPages; i++) {
-                const button = document.createElement('button');
-                button.className = `page-number ${i === currentPage ? 'active' : ''}`;
-                button.textContent = i;
-                button.addEventListener('click', () => {
-                    currentPage = i;
-                    updatePagination();
-                });
-                nextButton.before(button);
-            }
-
-            // Update tombol prev dan next
-            prevButton.disabled = currentPage === 1;
-            nextButton.disabled = currentPage === totalPages;
-
-            prevButton.onclick = () => {
-                if (currentPage > 1) currentPage--;
-                updatePagination();
-            };
-
-            nextButton.onclick = () => {
-                if (currentPage < totalPages) currentPage++;
-                updatePagination();
-            };
-        }
-
-        // Update tampilan
-        function updatePagination() {
-            displayImages(currentPage);
-            setupPagination();
-        }
-
-        // Inisialisasi pertama kali
-        updatePagination();
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>

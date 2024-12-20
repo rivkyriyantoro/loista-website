@@ -831,7 +831,7 @@ img {
 
 <body>
     <!-- Menyertakan Navbar -->
-    @include('components.navbar')
+    {{-- @include('components.navbar') --}}
 
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <!-- Indikator/dots -->
@@ -893,10 +893,25 @@ img {
     <div class="featured-products">Featured Products</div>
 
      <!-- Konten Section 2 -->
-     <div class="content-fupo">
+     <div class="containercontent-fupo">
+        <div class="container text-center">
+            <div class="row">
+              <div class="col-6 col-sm-3"></div>
+              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+              <!-- Force next columns to break to new line -->
+              <div class="w-100"></div>
+
+              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+            </div>
+          </div>
+
+
+    </div>
+
 
         <!-- Kolom Kiri (Living Room + Dining Room) -->
-        <div class="left-column">
+        {{-- <div class="left-column">
             <!-- Living Room Section -->
             <div class="overlay-fupo">
                 <img class="overlay-image" src="https://images.unsplash.com/photo-1720048169987-2fd6bd1bf2b4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Living Room">
@@ -922,7 +937,7 @@ img {
                     <h2>Office</h2>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 

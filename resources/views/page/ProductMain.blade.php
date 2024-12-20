@@ -111,7 +111,7 @@
     text-decoration: none;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    width: 224px;
+    width: 112px;
     height: 37px;
     margin: 0 auto;
     font-weight: 600;
