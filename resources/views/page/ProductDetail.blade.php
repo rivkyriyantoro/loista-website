@@ -194,12 +194,12 @@
             gap: 20px;
         }
 
-    
+
     </style>
 </head>
 <body>
     <!-- Menyertakan Navbar -->
-    {{-- @include('components.navbar') --}}
+    @include('components.navbar')
 
     <div class="container mt-3">
         <nav aria-label="breadcrumb">
