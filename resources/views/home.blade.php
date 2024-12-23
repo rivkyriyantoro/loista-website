@@ -1,4 +1,81 @@
-<!DOCTYPE html>
+@extends('layouts.master.app')
+@section('title', 'Home')
+@push('style')
+@endpush
+@section('main')
+    <!-- Konten Section 1 -->
+    <div class="container section-1">
+        <div class="row">
+            <!-- Kolom Gambar -->
+            <div class="col-lg-6 mb-4 img1">
+                <img src="/img/logo.png" alt="Produk Unggulan" class="img-fluid custom-img">
+            </div>
+
+            <!-- Kolom Teks dan Tombol -->
+            <div class="col-lg-12 text-box">
+                <p>
+                    As a renowned specialist in furniture and interior design, PT LO:ISTA Indonesia was established in 2011.
+                    With the tagline "Furniture & Interior Design," we believe that every space reflects the unique touch of
+                    its owner. LOISTA is here to bring your dream concepts to life in every piece of furniture and interior
+                    design.
+                    Our commitment is to consistently deliver excellent service with high-quality products that breathe new
+                    life and warmth into every space. PT LO:ISTA Indonesia prides itself on infusing a modern, exclusive
+                    touch into every product, from kitchens, living rooms, dining areas, bedrooms, and offices to decorative
+                    accessories.
+                    To ensure the best service, PT LO:ISTA Indonesia operates a showroom in a strategic location in
+                    Tangerang. We offer comprehensive solutions for furniture, home interior design, and decoration to meet
+                    your creative needs.
+                </p>
+                <a href="#" class="btn-see-more">See About Our Company</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-products">Featured Products</div>
+
+    <!-- Konten Section 2 -->
+    <div class="content-fupo">
+
+        <!-- Kolom Kiri (Living Room + Dining Room) -->
+        <div class="left-column">
+            <!-- Living Room Section -->
+            <div class="overlay-fupo">
+                <img class="overlay-image"
+                    src="https://images.unsplash.com/photo-1720048169987-2fd6bd1bf2b4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Living Room">
+                <div class="overlay-text">
+                    <h2>Living Room</h2>
+                </div>
+            </div>
+
+            <!-- Dining Room Section -->
+            <div class="overlay-fupo">
+                <img class="overlay-image"
+                    src="https://images.unsplash.com/photo-1731370963535-aa6e57ed40f6?q=80&w=1884&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Dining Room">
+                <div class="overlay-text">
+                    <h2>Dining Room</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan (Office) -->
+        <div class="right-column">
+            <div class="overlay-fupo">
+                <img class="overlay-image"
+                    src="https://images.unsplash.com/photo-1719937206333-dceea3c5564d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Office">
+                <div class="overlay-text">
+                    <h2>Office</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@push('scripts')
+@endpush
+
+{{-- <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -1028,4 +1105,4 @@ img {
 </html>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
+ --}}
