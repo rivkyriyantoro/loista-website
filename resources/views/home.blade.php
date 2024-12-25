@@ -115,6 +115,22 @@
     font-weight: 600;
 }
 
+.btn-see-all{
+display: flex;                    /* Menggunakan flexbox untuk tombol */
+    justify-content: center;          /* Menyusun teks di tengah secara horizontal */
+    align-items: center;              /* Menyusun teks di tengah secara vertikal */
+    background-color: #333333;        /* Warna latar belakang tombol */
+    color: white;                     /* Warna teks tombol */
+    padding: 10px 20px;                /* Padding atas/bawah 10px, kanan/kiri 20px */
+    font-size: 14px;                  /* Ukuran font */
+    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
+    border-radius: 10px;              /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
+    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
+    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
+    font-weight: 600;
+}
 
 
 
@@ -200,22 +216,7 @@
 
 }
 
-.btn-see-all{
-display: flex;                    /* Menggunakan flexbox untuk tombol */
-    justify-content: center;          /* Menyusun teks di tengah secara horizontal */
-    align-items: center;              /* Menyusun teks di tengah secara vertikal */
-    background-color: #333333;        /* Warna latar belakang tombol */
-    color: white;                     /* Warna teks tombol */
-    padding: 10px 20px;                /* Padding atas/bawah 10px, kanan/kiri 20px */
-    font-size: 14px;                  /* Ukuran font */
-    text-decoration: none;            /* Menghilangkan garis bawah jika ada */
-    border-radius: 10px;              /* Membuat sudut tombol melengkung */
-    transition: background-color 0.3s ease; /* Efek transisi saat hover */
-    width: 224px;                     /* Lebar tombol mengikuti lebar teks */
-    height: 37px;                     /* Tinggi otomatis mengikuti isi tombol */
-    margin: 0 auto;                   /* Membuat tombol terletak di tengah secara horizontal */
-    font-weight: 600;
-}
+
 
    /* Mengatur posisi teks di pojok kiri bawah */
    .overlay-text {
@@ -892,25 +893,54 @@ img {
 
     <div class="featured-products">Featured Products</div>
 
-     <!-- Konten Section 2 -->
-     <div class="containercontent-fupo">
-        <div class="container text-center">
-            <div class="row">
-              <div class="col-6 col-sm-3"></div>
-              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    <div class="containercontent-fupo">
 
-              <!-- Force next columns to break to new line -->
-              <div class="w-100"></div>
 
-              <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <!-- Struktur Dua Kolom Utama -->
+        <div class="container">
+          <div class="row">
+            <!-- Kolom Pertama: 2 Baris -->
+            <div class="col-md-6">
+              <!-- Baris 1 di Kolom 1 -->
+              <div class="row mb-3">
+                <div class="col-12">
+                  <div class="overlay-fupo">
+                    <img class="overlay-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Living Room">
+                    <div class="overlay-text">
+                      <h2>Living Room</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Baris 2 di Kolom 1 -->
+              <div class="row">
+                <div class="col-12">
+                  <div class="overlay-fupo">
+                    <img class="overlay-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Bedroom">
+                    <div class="overlay-text">
+                      <h2>Bedroom</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Kolom Kedua: 1 Baris -->
+            <div class="col-md-6">
+              <div class="overlay-fupo">
+                <img class="overlay-image" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Kitchen">
+                <div class="overlay-text">
+                  <h2>Kitchen</h2>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
 
 
-    </div>
 
-
-        <!-- Kolom Kiri (Living Room + Dining Room) -->
+        {{-- <!-- Kolom Kiri (Living Room + Dining Room) --> --}}
         {{-- <div class="left-column">
             <!-- Living Room Section -->
             <div class="overlay-fupo">
