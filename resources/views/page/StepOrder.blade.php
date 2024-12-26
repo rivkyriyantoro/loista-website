@@ -15,6 +15,33 @@
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
+    .carousel-item img {
+        width: 100%;
+        /* Full width */
+        height: 551px;
+        /* Maintain aspect ratio */
+        object-fit: cover;
+        /* Ensure images fill the container properly */
+    }
+
+    @media (max-width: 768px) {
+        .carousel .carousel-item img {
+            max-height: 200px;
+            /* Set maximum height for images */
+            object-fit: cover;
+            /* Ensure images cover without distorting */
+        }
+    }
+
+    /* Larger screens adjustments */
+    @media (min-width: 769px) {
+        .carousel .carousel-item img {
+            max-height: 400px;
+            /* Larger height for bigger screens */
+            object-fit: cover;
+        }
+    }
+
     .mt-7 {
         margin-top: 8rem;
     }
@@ -71,10 +98,42 @@
             </div>
         </div>
     </div>
-    <div class="row text-center mt-5">
-        <!-- Step 1 -->
+    <div class="container mt-2 mb-3">
         <div class="col-12">
-            <img src="{{ asset('images/Banner.png') }}" alt="Konsultasi" class="full-width-image">
+            <div id="horizontalCarousel" class="carousel slide " data-bs-ride="carousel">
+                <div class="carousel-inner mt-0">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('images/Banner.png') }}" class="d-block w-100 img-fluid" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/Banner.png') }}" class="d-block w-100 img-fluid" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/Banner.png') }}" class="d-block w-100 img-fluid" alt="Image 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/Banner.png') }}" class="d-block w-100 img-fluid" alt="Image 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/Banner.png') }}" class="d-block w-100 img-fluid" alt="Image 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/Banner.png') }}" class="d-block w-100 img-fluid" alt="Image 6">
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#horizontalCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#horizontalCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
     @include('components.footer')
