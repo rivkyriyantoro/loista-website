@@ -81,6 +81,11 @@ Route::get('/StepOrder', function () {
     return view('page.StepOrder'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
 })->name('StepOrder');
 
+Route::get('/Test', function () {
+    return view('page.Test'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'
+})->name('Test');
+
+
 
 // Route::get('/GalleryDetail', function () {
 //     return view('page.GalleryDetail'); // Pastikan file 'contacus.blade.php' ada di folder 'resources/views/page'

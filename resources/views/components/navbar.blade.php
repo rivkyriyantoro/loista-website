@@ -236,7 +236,7 @@
             <li class="nav-item"><a class="nav-link @yield('home')" href="{{ route('InfoPromotions') }}">Info & Promotions</a></li>
             <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('ContactUs') }}">Contact Us</a></li>
             <li class="nav-item"><a class="nav-link @yield('contact')" href="{{ route('ProductMain') }}">Contact Us</a></li>
-            <li> <a href="#" class="btn-whatsapp mx-auto"><i class="fab fa-whatsapp"></i> Whatsapp Us  </a></li>        
+            <li> <a href="#" class="btn-whatsapp mx-auto"><i class="fab fa-whatsapp"></i> Whatsapp Us  </a></li>
           </ul>
 
 
