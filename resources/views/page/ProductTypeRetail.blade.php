@@ -17,14 +17,8 @@
     /* Styling untuk Konten Section 2 */
 
 
-        .section-2 .row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 28px;
-        }
 
-        .section-2 .col-lg-6 img {
+        .Retails .col-lg-6 img {
             width: 100%;
             height: auto;
             object-fit: cover;
@@ -82,11 +76,11 @@
 
  /* Custom Styling untuk grid */
 
- .section-2 {
+ .Retails {
     display: flex;
-width: 1440px;
+max-width: 1440px;
 flex-direction: column;
-align-items: center;
+align-items: left;
 gap: 36px;
 
  }
@@ -148,20 +142,18 @@ gap: 36px;
 
 /* Styling untuk Konten text2 */
 .responsive-breadcrumb {
+color: #707070;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
   width: 100%;
-  padding-top: 118px; /* Padding atas */
   padding-bottom: 45px; /* Padding bawah */
   display: flex;
   justify-content: left; /* Menyusun teks di tengah */
   align-items: left;
 }
-.responsive-container {
-  width: 100%;
-  height: 77px;
-  display: flex;
 
 
-}
 
 .responsive-text-h1 {
   width: 100%;
@@ -186,7 +178,22 @@ gap: 36px;
 
 /* Media query untuk mobile (max-width 768px) */
 @media (max-width: 768px) {
+    .responsive-container {
+  width: 100%;
+  height: 28px;
+  display: flex;
 
+}
+
+.responsive-breadcrumb{
+  width: 100%;
+    color: #707070;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  word-wrap: break-word;
+  padding-bottom: 14px;
+}
 
   .responsive-text {
     font-size: 28px; /* Ukuran font lebih kecil di mobile */
@@ -194,15 +201,6 @@ gap: 36px;
     text-align: center; /* Menyusun teks di tengah */
   }
 
-
-.responsive-breadcrumb {
-  width: 100%;
-  margin-top: 14px;
-  padding-bottom: 45px; /* Padding bawah */
-  display: flex;
-  justify-content: left; /* Menyusun teks di tengah */
-  align-items: left;
-}
 
 .responsive-text-h1 {
   width: 100%;
@@ -253,17 +251,25 @@ gap: 36px;
     @include('components.navbar')
 
 
-
       <!-- section 3 -->
-     <div class="container section-2">
+    <div class="container Retails ">
+  <div class="row text-start">
 
-        <div class="responsive-breadcrumb">
-            <p class="responsive-text-h3">Product/Retail/</p>
-          </div>
+    <div class="responsive-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Product</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Retail</li>
+        </ol>
 
-        <div class="responsive-container">
-            <p class="responsive-text-h1">Retails</p>
-          </div>
+
+    </div>
+    <!-- Title aligned to the left -->
+    <div class="responsive-container">
+      <p class="responsive-text-h1">Retails</p>
+    </div>
+  </div>
+
+
 
 
           <!-- Wardrobe -->

@@ -1,4 +1,81 @@
-<!DOCTYPE html>
+@extends('layouts.master.app')
+@section('title', 'Home')
+@push('style')
+@endpush
+@section('main')
+    <!-- Konten Section 1 -->
+    <div class="container section-1">
+        <div class="row">
+            <!-- Kolom Gambar -->
+            <div class="col-lg-6 mb-4 img1">
+                <img src="/img/logo.png" alt="Produk Unggulan" class="img-fluid custom-img">
+            </div>
+
+            <!-- Kolom Teks dan Tombol -->
+            <div class="col-lg-12 text-box">
+                <p>
+                    As a renowned specialist in furniture and interior design, PT LO:ISTA Indonesia was established in 2011.
+                    With the tagline "Furniture & Interior Design," we believe that every space reflects the unique touch of
+                    its owner. LOISTA is here to bring your dream concepts to life in every piece of furniture and interior
+                    design.
+                    Our commitment is to consistently deliver excellent service with high-quality products that breathe new
+                    life and warmth into every space. PT LO:ISTA Indonesia prides itself on infusing a modern, exclusive
+                    touch into every product, from kitchens, living rooms, dining areas, bedrooms, and offices to decorative
+                    accessories.
+                    To ensure the best service, PT LO:ISTA Indonesia operates a showroom in a strategic location in
+                    Tangerang. We offer comprehensive solutions for furniture, home interior design, and decoration to meet
+                    your creative needs.
+                </p>
+                <a href="#" class="btn-see-more">See About Our Company</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-products">Featured Products</div>
+
+    <!-- Konten Section 2 -->
+    <div class="content-fupo">
+
+        <!-- Kolom Kiri (Living Room + Dining Room) -->
+        <div class="left-column">
+            <!-- Living Room Section -->
+            <div class="overlay-fupo">
+                <img class="overlay-image"
+                    src="https://images.unsplash.com/photo-1720048169987-2fd6bd1bf2b4?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Living Room">
+                <div class="overlay-text">
+                    <h2>Living Room</h2>
+                </div>
+            </div>
+
+            <!-- Dining Room Section -->
+            <div class="overlay-fupo">
+                <img class="overlay-image"
+                    src="https://images.unsplash.com/photo-1731370963535-aa6e57ed40f6?q=80&w=1884&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Dining Room">
+                <div class="overlay-text">
+                    <h2>Dining Room</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kolom Kanan (Office) -->
+        <div class="right-column">
+            <div class="overlay-fupo">
+                <img class="overlay-image"
+                    src="https://images.unsplash.com/photo-1719937206333-dceea3c5564d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Office">
+                <div class="overlay-text">
+                    <h2>Office</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+@push('scripts')
+@endpush
+
+{{-- <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -13,43 +90,31 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 
-
     <style>
 
 
 
 
-/* carousel */
+ /* Styling untuk carousel */
 .carousel-inner .carousel-item img {
-  width: 100%;      /* Gambar mengisi lebar kontainer */
-  height: 456px;    /* Tinggi tetap 456px */
-  object-fit: cover; /* Menjaga aspek rasio gambar dan mengisi kotak tanpa merusak proporsi */
+    width: 100%; /* Membuat gambar mengisi lebar kontainer */
+    height: 456px; /* Menetapkan tinggi gambar agar sesuai dengan 456px */
+    object-fit: cover; /* Menjaga proporsi gambar tanpa distorsi */
 }
 
-/* carousel mobie? */
-@media (max-width: 768px) {
-  /* Mengatur gambar carousel agar di-crop dan di-zoom sesuai ukuran */
+
+/* Media query untuk layar medium ke atas */
+@media (min-width: 768px) {
   .carousel-inner .carousel-item img {
-    width: 390px;
-    height: 124px;
-    object-fit: cover;  /* Crop dan zoom gambar untuk memenuhi ukuran yang diinginkan */
-    margin: 0 auto;     /* Mengatur gambar agar tetap berada di tengah */
-  }
-
-  /* Mengubah ukuran gambar placeholder untuk mobile */
-  .carousel-item img {
-    width: 390px;
-    height: 124px;
-    object-fit: cover;  /* Crop dan zoom gambar placeholder agar sesuai ukuran */
-    margin: 0 auto;
-  }
-
-  /* Mengubah ukuran tombol navigasi pada layar kecil */
-  .carousel-control-prev-icon, .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
+    height: auto;
+    object-fit: contain;
   }
 }
+
+
+
+
+
 
  /* Styling untuk Konten Section 1 */
         .section-1 {
@@ -108,81 +173,6 @@
         }
 
 
-/* Tampilan Default untuk Desktop */
-@media (max-width: 768px) {
-  .carousel-indicators {
-    position: absolute;
-    bottom: 25px; /* Menurunkan indikator ke bawah lebih jauh */
-    display: flex;
-    justify-content: center; /* Menjaga indikator tetap terpusat */
-    align-items: center; /* Menjaga indikator berada di tengah secara vertikal */
-
-  }
-
-  .carousel-indicators button {
-    background-color: rgba(255, 255, 255, 0.7); /* Warna latar indikator */
-    border: none;
-    opacity: 0.7; /* Menurunkan opacity untuk efek transisi */
-    transition: background-color 0.3s ease, opacity 0.3s ease; /* Efek transisi */
-  }
-
-  .carousel-indicators .active {
-    background-color: rgba(255, 255, 255, 1); /* Warna latar belakang indikator yang aktif */
-    opacity: 1; /* Indikator aktif dengan opacity penuh */
-  }
-}
-
-/* Pastikan Navbar berada di atas carousel dengan z-index tinggi */
-
-
-
-
-
-
-
-/* CSS untuk mengatur ikon carousel */
-.carousel-control-prev, .carousel-control-next {
-font-size: 38px;
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang tombol */
-  border-radius: 50%; /* Membuat tombol bulat */
-  padding: 10px; /* Menambahkan padding untuk jarak ikon dengan tepi tombol */
-  transition: background-color 0.3s ease; /* Efek transisi untuk background saat hover */
-}
-
-.carousel-control-prev i, .carousel-control-next i {
-  font-size: 30px; /* Ukuran ikon */
-  transition: color 0.3s ease; /* Efek transisi untuk warna ikon */
-}
-
-/* Responsif untuk perangkat mobile */
-@media (max-width: 768px) {
-  .carousel-control-prev, .carousel-control-next {
-    padding-top: 15px;
-
-  }
-
-  .carousel-control-prev i, .carousel-control-next i {
-    font-size: 14px;
-    padding-top: 50px/* Mengurangi ukuran ikon untuk mobile */
-  }
-}
-
-/* Responsif untuk tablet */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .carousel-control-prev, .carousel-control-next {
-    padding: 12px; /* Padding lebih kecil untuk tablet */
-  }
-
-  .carousel-control-prev i, .carousel-control-next i {
-    font-size: 32px; /* Ukuran ikon sedikit lebih besar untuk tablet */
-  }
-}
-
-
-
-
-
-
     /* Styling untuk Tombol */
     .btn-see-more {
     display: flex;                    /* Menggunakan flexbox untuk tombol */
@@ -206,7 +196,6 @@ font-size: 38px;
 
 
 /* Styling untuk Konten Section 2 */
-/* Kontainer utama */
 
 .featured-products {
     width: 100%;
@@ -706,14 +695,13 @@ img {
 
 
 .container.Blog {
-    max-width: 1164px; /* Pastikan elemen induk memiliki lebar yang sesuai */
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    max-width: 1164px;
+    max-width: 100%;
 
 
 }
@@ -725,7 +713,7 @@ img {
     justify-content: flex-start;
     align-items: flex-start;
     gap: 20px;
-    max-width: 1164px;
+    max-width: 100%;
 }
 
 .title {
@@ -921,40 +909,39 @@ img {
     <!-- Menyertakan Navbar -->
     @include('components.navbar')
 
-    <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indikator/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
 
-    <!-- Indicators/dots -->
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="carousel-image d-block w-100" alt="...">
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <i class="fas fa-chevron-circle-left" style="color:rgb(255, 255, 255); font-size: 2rem;"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <i class="fas fa-chevron-circle-right" style="color:rgb(255, 255, 255); font-size: 2rem;"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
 
- <!-- The slideshow/carousel -->
-<div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="https://images.unsplash.com/photo-1445510861639-5651173bc5d5?q=80&w=1959&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Los Angeles" class="d-block" style="width:100%" height="456px">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chicago" class="d-block" style="width:100%" height="456px">
-    </div>
-    <div class="carousel-item">
-      <img src="https://images.unsplash.com/photo-1517467139951-f5a925c9f9de?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="New York" class="d-block" style="width:100%" height="456px">
-    </div>
-  </div>
-
-
-
-   <!-- Left and right controls/icons -->
-<button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <i class='fas fa-chevron-circle-left' style='color:rgb(255, 255, 255)'></i>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <i class='fas fa-chevron-circle-right' style='color:rgb(255, 255, 255)'></i>
-  </button>
-</div>
 
     <!-- Konten Section 1 -->
     <div class="container section-1">
@@ -1116,4 +1103,4 @@ img {
 </html>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-
+ --}}
