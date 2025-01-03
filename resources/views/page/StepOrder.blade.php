@@ -17,102 +17,77 @@
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
 
-    .carousel {
+    .carousel-container {
         position: relative;
-        width: 100%;
-        overflow: hidden;
+        margin: auto;
+        max-width: 100%;
+        overflow: visible;
+        /* Allow overflow for previews */
     }
 
-    .carousel-track {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: 100%;
-    }
-
-    .carousel-slide {
-        flex: 0 0 80%;
-        /* Active slide takes 80% of the carousel width */
-        margin: 0 1%;
-        /* Add space for previews on both sides */
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 400px;
-        opacity: 0.5;
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    .carousel-inner {
         position: relative;
-        overflow: hidden;
+        display: flex;
     }
 
-    .carousel-slide.active {
-        opacity: 1;
+    .carousel-item {
+        flex: 0 0 60%;
+        /* Adjust size of the active slide */
+        margin: 0 20%;
+        /* Create space for previews */
+        transition: transform 0.6s ease-in-out;
     }
 
-    .carousel-slide img {
-        width: 100%;
-        height: 100%;
+    .carousel-item img {
+        border-radius: 15px;
+        max-height: 300px;
         object-fit: cover;
-        border-radius: 0;
     }
 
-    .carousel-nav {
+    .carousel-control-prev {
+        left: 12.5%;
+    }
+
+    .carousel-control-next {
+        right: 12.5%;
+    }
+
+    .carousel-preview {
         position: absolute;
         top: 50%;
-        /* width: 100%; */
-        left: 110px;
-        right: 110px;
-        display: flex;
-        justify-content: space-between;
         transform: translateY(-50%);
+        width: 60%;
+        /* Match size of the main slide */
+        height: 300px;
+        /* Match height of the main slide */
+        overflow: hidden;
+        z-index: 1;
+        transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
     }
 
-    .carousel-btn {
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 50%;
-        cursor: pointer;
+    .preview-left {
+        left: -65%;
+        /* Increase distance for preview */
     }
 
-    .carousel-btn:hover {
-        background: rgba(0, 0, 0, 0.8);
+    .preview-right {
+        right: -65%;
+        /* Increase distance for preview */
     }
 
-    @media (max-width: 768px) {
-        .carousel {
-            max-width: 90%;
-        }
-
-        .carousel-slide {
-            flex: 0 0 80%;
-            height: 300px;
-        }
-
-        .carousel-nav {
-            left: 20px;
-            right: 20px;
-        }
+    .carousel-preview img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+        object-fit: cover;
+        /* Prevent zoom effect */
+        transform: scale(1);
+        /* Default scale */
     }
 
-    @media (max-width: 576px) {
-        .carousel {
-            max-width: 100%;
-        }
-
-        .carousel-slide {
-            flex: 0 0 80%;
-            height: 250px;
-        }
-
-        .carousel-nav {
-            left: 10px;
-            right: 10px;
-        }
+    .carousel-item.active img {
+        transform: scale(1);
+        /* No zoom for active slide */
     }
 
     .mt-7 {
@@ -163,110 +138,70 @@
         </div>
     </div>
     <div class="container mt-5">
-        <div class="carousel">
-            <div class="carousel-track">
-                <div class="carousel-slide">
-                    <img src="{{ asset('images/test-banner.jpeg') }}" alt="Slide 1">
+        <div class="carousel-container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                {{-- <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div> --}}
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="{{ asset('images/test-banner.jpeg') }}" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-preview preview-left">
+                            <img src="{{ asset('images/test-banner.jpeg') }}" alt="Preview 3">
+                        </div>
+                        <div class="carousel-preview preview-right">
+                            <img src="{{ asset('images/test-banner.jpeg') }}" alt="Preview 2">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 1</h5>
+                            <p>Description for Slide 1.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/test-banner.jpeg') }}" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-preview preview-left">
+                            <img src="{{ asset('images/test-banner.jpeg') }}" alt="Preview 1">
+                        </div>
+                        <div class="carousel-preview preview-right">
+                            <img src="{{ asset('images/test-banner.jpeg') }}" alt="Preview 3">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 2</h5>
+                            <p>Description for Slide 2.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="{{ asset('images/test-banner.jpeg') }}" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-preview preview-left">
+                            <img src="{{ asset('images/test-banner.jpeg') }}" alt="Preview 2">
+                        </div>
+                        <div class="carousel-preview preview-right">
+                            <img src="{{ asset('images/test-banner.jpeg') }}" alt="Preview 1">
+                        </div>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 3</h5>
+                            <p>Description for Slide 3.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-slide">
-                    <img src="{{ asset('images/test-banner.jpeg') }}" alt="Slide 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="{{ asset('images/test-banner.jpeg') }}" alt="Slide 3">
-                </div>
-            </div>
-            <div class="carousel-nav">
-                <button class="carousel-btn" id="prevBtn">&#9664;</button>
-                <button class="carousel-btn" id="nextBtn">&#9654;</button>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     </div>
 
-    <script>
-        const track = document.querySelector('.carousel-track');
-        const slides = Array.from(track.children);
-        const prevBtn = document.getElementById('prevBtn');
-        const nextBtn = document.getElementById('nextBtn');
-        let currentIndex = 1;
-        let isTransitioning = false;
-
-        const updateCarousel = () => {
-            const slideWidth = slides[0].getBoundingClientRect().width;
-            const carouselWidth = document.querySelector('.carousel').clientWidth;
-            // const totalSlides = slides.length;
-
-            // Shift active slide slightly to the left to reduce empty space on the right
-            const trackPosition = -(currentIndex * (slideWidth + carouselWidth * 0.03)) + carouselWidth * 0.1;
-            track.style.transform = `translateX(${trackPosition}px)`;
-
-            // Reset and highlight active and preview slides
-            slides.forEach((slide, index) => {
-                slide.style.opacity = "0.5";
-
-                if (index === currentIndex) {
-                    slide.classList.add('active');
-                    slide.style.opacity = "1";
-                } else {
-                    slide.classList.remove('active');
-                }
-            });
-        };
-
-        const nextSlide = () => {
-            currentIndex = (currentIndex + 1) % slides.length;
-            if (currentIndex === 1) currentIndex = 1; // Ensure it loops back to slide 2
-            updateCarousel();
-        };
-
-        const prevSlide = () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-            if (currentIndex === 1) currentIndex = slides.length - 1; // Ensure it loops back to slide 2
-            updateCarousel();
-        };
-
-        prevBtn.addEventListener('click', () => {
-            prevSlide(); // Panggil fungsi untuk memindahkan slide sebelumnya
-
-            // Pastikan transisi tetap berlaku
-            track.style.transition = "transform 0.5s ease-in-out";
-
-            // Tunggu transisi selesai, lalu atur ulang elemen
-            setTimeout(() => {
-                track.style.transition = "none"; // Matikan transisi sementara
-
-                const lastSlide = slides.pop(); // Ambil slide terakhir
-                slides.unshift(lastSlide); // Pindahkan slide terakhir ke awal
-                track.insertBefore(lastSlide, track.firstChild); // Atur ulang di DOM
-
-                currentIndex = 1; // Reset indeks
-                updateCarousel(); // Perbarui tampilan carousel
-            }, 500); // Tetap berlaku 500ms meskipun tombol diklik berkali-kali
-        });
-
-        nextBtn.addEventListener('click', () => {
-            nextSlide(); // Panggil fungsi untuk memindahkan slide berikutnya
-
-            // Pastikan transisi tetap berlaku
-            track.style.transition = "transform 0.5s ease-in-out";
-
-            // Tunggu transisi selesai, lalu atur ulang elemen
-            setTimeout(() => {
-                track.style.transition = "none"; // Matikan transisi sementara
-
-                const firstSlide = slides.shift(); // Ambil slide pertama
-                slides.push(firstSlide); // Pindahkan slide pertama ke akhir
-                track.appendChild(firstSlide); // Atur ulang di DOM
-
-                currentIndex = 1; // Reset indeks
-                updateCarousel(); // Perbarui tampilan carousel
-            }, 500); // Tetap berlaku 500ms meskipun tombol diklik berkali-kali
-        });
-
-        // Automatically initialize carousel
-        updateCarousel();
-    </script>
-
-
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     @include('components.footer')
 </body>
